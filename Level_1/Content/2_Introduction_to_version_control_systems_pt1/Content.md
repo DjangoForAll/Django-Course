@@ -1,13 +1,13 @@
 # Introduction to Version Control Systems ( VCS )
 
-Version control systems are vital to almost every development workflow, we'll take a quick look at why it exists and how to start using it for development.
+Version control systems are vital to almost every development workflow, we'll take a quick look at why it exists and how to start using it for software development.
 
 _If you are already familiar with version control systems like git, you can take this time to undetstand exactly how it works internally._
 
 ## The Problem
 
 To understand the value of VCS lets take a short example,
-One day, your class teacher divided your class into small groups to prepare a long report on something old (probably), You being the _technical guru_ of the group suggested that your group complete the whole thing with computers and share the works over email, sounds really cool right? ...fast forward some weeks and now you have a million emails and no idea on who contributed what or which one is the latest copy.
+One day, your teacher divided your class into small groups to prepare a long report on something old (probably), You being the _technical guru_ of the group suggested that your group complete the whole thing with computers and share the works over email, sounds really cool right? ...fast forward some weeks and now you have a million emails and no idea on who contributed what or which one is the latest copy.
 
 Now think of organizations with thousands of employees working on the same project, thousands of changes being made everyday, there has to be some system to keep track of changes to ensure that things dont turn into lava overnight. This is where version control systems shine.
 
@@ -15,7 +15,7 @@ Now that we have a general idea of why we need Version Control Systems, lets div
 
 ## Git
 
-It is one of most widely used version control system in the world, it is developed by the same guy who built the Linux operating system kernel ( Linus Torwarlds ) and it is an essential prerequisite for almost all development related jobs out there.
+It is one of most widely used version control system in the world, it is developed by the same guy who built the Linux operating system kernel ( Linus Torwarlds ) and it is an essential prerequisite for almost all software development related jobs out there.
 
 ### Installing git
 
@@ -42,17 +42,17 @@ Now we have a really cool version controlled project but its kinda empty, so let
 
 `Cats : A Brief Summary`
 
-Now that you have created a new file, we can take a look the capabilties of git.
+Now that you have created a new file, we can take a look at how we can track its changes with git.
 
 ### Working Directory, Staging Area and Repository
 
 A git development environment consists of three sections
 
-1. Working Directory
-   This is simply the current state of files and folders inside your current folder, these changes are _not_ yet recognized by git and are _not_ tracked yet.
-2. Staging Area
+1. **Working Directory**  
+   This is simply the current state of files and folders inside your current folder, these changes are **_not_** yet recognized by git and are **_not_** tracked yet.
+2. **Staging Area**  
    This is a temporary location for your files before they are saved to a repository. you can add more than one file to the staging area.
-3. Repository
+3. **Repository**  
    This is where your actual work and its history lies. you can sync repositories to other computers and expect the same copies to be present.
 
 To get a better view lets explain this concept with a example.
@@ -62,17 +62,17 @@ To view the current status of our git repository run the following command
 
 `git status`
 
-Once you run the command, git will inform you that you have created a new file. this file is still in the working directory.
+Once you run the command, git will inform you that you have created a new file. ( the file is still in the working directory )
 
 To stage the file with git we can run the following command
 
 `git add cat.txt`
 
-This command will add the file `cat.txt` into the git staging area, alternatively you can also do `git add .` which will add all files in your folder into the git staging area ( when you dont want to manually specify each file )
+This command will add the file `cat.txt` into the git staging area, alternatively you can do `git add .` which will add all files in your folder into the git staging area ( when you dont want to manually specify each file )
 
-If you are still confused about the staging area, its importance will be become clear as you progess.
+_If you are still confused about the staging area, its importance will be become clear as you progess._
 
-Once the files have been staged, they have to be moved to the repository, this is called a commit, commits are usually a logical chunk of change, you dont have to commit for every change you make to the file, in our example youi can commit the file once you have completed a section of the report. Commits create snapshots of the repository, you can restore your your repository to any historical commit at any time.
+Once the files have been staged, they have to be moved to the repository, this is called a commit, commits are usually a logical chunk of change, you dont have to commit for every change you make to the file, in our example youi can commit the file once you have completed a section of the report or such. Commits create snapshots of the repository, you can restore your repository to any commit at any time.
 
 Commits are always ( ideally ) associated with a commit message, the commit message makes it easier to understand the intent of the change, this is incredibly useful if you wanted to restore the repository into an earlier commit you made.
 
@@ -80,7 +80,7 @@ The following command is used to create a commit in git
 
 `git commit -m "Started to create a report on cats"`
 
-This command will take all the files in staging and commit them to the git repository. Once you have commited running `git status` again will let you know that you no longer have any changes, (Your working directory and the git repository are in sync now). Commiting clears the staging area so that you can start working on your new changes.
+This command will take all the files in staging and commit them to the git repository. Once you have commited, running `git status` again will let you know that you no longer have any changes, (Your working directory and the git repository are in sync now). Commiting clears the staging area so that you can start working on your new changes.
 
 To view all your past commits you can use the log command
 
