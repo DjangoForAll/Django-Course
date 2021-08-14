@@ -2,7 +2,7 @@
 
 ## Objective
 
-This course is designed to teach the basics of web development with the Django Web Framework to anyone intrested. This course is designed to be hands on with milestone targets at each level, the targets are designed to make you think and implement the concepts you have learned in the course.
+This course is designed to teach the basics of web development with the Django Web Framework to anyone intrested. This course is designed to be hands on with milestone targets at each level, the targets are designed to make you think and implement the concepts you have learned throughout the course.
 
 ## Course Outcomes
 
