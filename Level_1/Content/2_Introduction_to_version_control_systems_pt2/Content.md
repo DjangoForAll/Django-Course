@@ -28,18 +28,30 @@ Once you have the url the following command will link the local repository to th
 
 Here the word origin is not a keyword, you can name it anything you want, usage of the word origin is just standard convention.
 
-### Branches
+### Basics of Git Branches
 
-Branching is a feature in git which allows you to isolate your work and work on multiple changes simultaneously.
+Branching is a feature in git which allows you to isolate your work and work on multiple changes simultaneously. you can switch between branches without loosing any data, branches are extremely useful when you want to work on different parts of the project simultaneously. to know what is the current branch you can execute the `git status` command we used earlier, the first line of its output will tell you what branch you are on. commands used to change branches and create branches will be explained later on
+
+By default you will be in the master or main branch of your repository ( master used to be the default branch in github but recently it was changed to main )
 
 ### Syncing Repositories
 
 now that you have linked the Github repository you can pull ( move changes in github into your local repo ) or push ( move local changes to git ) changes , since we already have changes made in local we can push the changes into github with the following command
 
-`git push origin master`
+`git push origin main`
 
-git pull
-forking
-Pull Requests
-Merging code
-Milestone
+Origin is a reference to the url we added earlier and main is the branch we want to push to
+
+Similarly we can also pull changes from the remote repository with the following command
+
+`git pull origin main`
+
+### Conflicts
+
+when developers work together ... TBC
+
+### Forking
+
+### Pull Requests
+
+### Merges
