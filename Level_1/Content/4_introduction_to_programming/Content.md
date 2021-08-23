@@ -1,7 +1,3 @@
-# Introduction to Programming
+# FizzBuzz
 
-This is a language agnostic introduction to programming,
-
-Introduction into programming fundementals
-programming with the help of fizzbuzz
-What lies ahead
+By now you must have experience in atleast one programming language, assuming that lets solve a simple problem.

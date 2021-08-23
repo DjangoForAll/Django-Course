@@ -61,6 +61,6 @@ when developers work together ... TBC
 ### Tips/Tricks for Git
 
 It is incredibly easy to mess-up a git repository and the best way to learn how not to do it is to keep experimenting, trying out various techniques and finding the sweetspot.
-Whatever happens do not try copy pasting git code unless you know exactly what its doing ( There is only pain down that path ! )
-Commit messages and Branch Names should always make sense, Otherwise years later you'll blame yourself ( Thats what i did )
-There is a sea of open source software out there, try to find something intresting and contribute back, Thats the best way to learn new stuff.
+Whatever happens, do **not** try copy pasting git code unless you know exactly what its doing **( There is only pain down that path ! )**
+Commit messages and Branch Names should always make sense, Otherwise years later you'll blame yourself **( Thats what i did )**
+There is a sea of open source software out there, try to find something intresting and contribute back, Thats the reccomended way to become a better engineer.
