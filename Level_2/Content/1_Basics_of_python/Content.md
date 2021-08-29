@@ -117,7 +117,38 @@ some_string = "hello world, This is A test"
 print(dir(some_string)) # prints all the functions available with strings
 ```
 
-now try each of the functions you got after running the snippet above and see what happens. you can try this with other types as well and see what happens.
+now try each of the functions you get after running the snippet above and see what happens. you can try this with other types as well and see what happens.
+
+### Functions in Python
+
+Functions in python is a group of statements that may or may not take inputs and may or may not return values. Functions are usually used when you want to repeatedly call a piece of code without writing the same code over and over again.
+
+```python
+def greet(name): # this defines a function called greet with one parameter called name
+    salutation = "Good Morning " + name # Note that the function body is indented, this is how python identifies the start of a python function
+    return salutation # The return keyword returns the value of the function to the caller
+
+print(greet("John")) # prints "Good Morning John"
+print(greet("Jane")) # prints "Good Morning Jane"
+# We only had to define the function once, we can call it as many times as we want
+```
+
+Take a note of the intendation structure of the code snippet, the functions body is always intended with a constant indentation of 4 spaces (or a tab).
+Pythons function block ends when the code stops indenting, this is how python identifies the end of a function.
+
+Functions can not return a value as well, In those cases `None` is the value returned by the function.
+
+we can also specify default values to the function parameters when we define the function.
+
+```python
+def greet(name, greeting = "Good Morning"): # this defines a function called greet with two parameters called name and greeting
+    return greeting + " " + name
+
+print(greet("John")) # prints "Good Morning John"
+print(greet("Jane", "Good Afternoon")) # prints "Good Afternoon Jane"
+print(greet(name="John")) # we can also pass parameters to the function by name, that way we can change the order of the parameters
+
+```
 
 ### Python 2 vs Python 3
 
