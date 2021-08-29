@@ -158,6 +158,7 @@ We have discussed about the boolean datatype earlier, we can leverage this datat
 print(1>2) # prints False
 print(2*2 == 4) # prints True
 print(True and False) # prints False
+print(not False) # prints True
 print( (2> 1) and (1 > 2) ) # prints False ( Evaluates to True and False )
 (2 > 1) and print("2 is greater than 1") # prints 2 is greater than 1
 (1 > 2) and print("1 is greater than 2") # prints nothing
