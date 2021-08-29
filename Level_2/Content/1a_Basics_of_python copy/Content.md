@@ -150,6 +150,45 @@ print(greet(name="John")) # we can also pass parameters to the function by name,
 
 ```
 
+### Conditionals in Python
+
+We have discussed about the boolean datatype earlier, we can leverage this datatype to create conditionals in python.
+
+```python
+print(1>2) # prints False
+print(2*2 == 4) # prints True
+print(True and False) # prints False
+print( (2> 1) and (1 > 2) ) # prints False ( Evaluates to True and False )
+(2 > 1) and print("2 is greater than 1") # prints 2 is greater than 1
+(1 > 2) and print("1 is greater than 2") # prints nothing
+```
+
+This type of conditional statements are hard to read and make little to no sense, so we will use a different type of conditional statement called `if` statements. They are easier to handle and they can have multiple branching conditions as well.
+
+```python
+some_number = 5
+if some_number > 1: # this is an if statement
+    print("given number is greater than 1") # this is the body of the if statement
+else: # this is the else statement
+    print("given number is not greater than 1") # this is the body of the else statement
+```
+
+This is a very simple if statement, it has only one condition , if the condition evalues to True or 1 , then the body of the if statement is executed. if not the body of the else is executed. Try running this with different conditions to see what happens.
+
+We can also write multiple branches of the same if statement by using elif.
+
+```python
+given_number = 5
+if given_number > 1: # this is an if statement
+    print("given number is greater than 1") # this is the body of the if statement
+elif given_number < 1: # this is an elif statement
+    print("given number is smaller than 1") # this is the body of the elif statement
+else: # this is the else statement
+    print("given number is 1!") # this is the body of the else statement
+```
+
+Once one of the conditions in the if statement is satisfied, the rest of the statements are not executed. Complicated branching logic can be simplified by using `if` statements efficiently.
+
 ### Python 2 vs Python 3
 
 Throughout this course we will be using Python 3. In many machines python defaults to python 2 and it might cause issues when you try to run sample code, make sure that you are using python 3 (preferably the latest version) always.
