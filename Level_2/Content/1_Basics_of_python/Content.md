@@ -117,7 +117,7 @@ some_string = "hello world, This is A test"
 print(dir(some_string)) # prints all the functions available with strings
 ```
 
-now try each of the functions above and see what happens. you can try this with other types as well and see what happens.
+now try each of the functions you got after running the snippet above and see what happens. you can try this with other types as well and see what happens.
 
 ### Python 2 vs Python 3
 
