@@ -7,11 +7,11 @@ _If you are already familiar with version control systems like git, you can take
 ## The Problem
 
 To understand the value of VCS lets take a short example,
-One day, your teacher divided your class into small groups to prepare a long report on something old (probably), You being the _technical guru_ of the group suggested that your group complete the whole thing with computers and share the works over email, sounds really cool right? ...fast forward some weeks and now you have a million emails and no idea on who contributed what or which one is the latest copy.
+For a class project report, your teacher divided your class into small groups, You being the _technical guru_ of the group suggested that your group complete the whole thing with computers and share the works over email, sounds really cool right? ...fast forward some weeks and now every team member has diffrent version of the project, tons of emails and no idea on who contributed what or which one is the latest copy.
 
-Now think of organizations with thousands of employees working on the same project, thousands of changes being made everyday, there has to be some system to keep track of changes to ensure that things dont turn into lava overnight. This is where version control systems shine.
+Now think of organizations with thousands of employees working on the same project, thousands of changes being made everyday, there has to be some system to keep track of changes to ensure that things dont break overnight. This is where version control systems shine.
 
-Now that we have a general idea of why we need Version Control Systems, lets dive a little deeper and understand exactly what else can it provide.
+Now that we have a general idea of why we need Version Control Systems, lets dive a little deeper and understand exactly what it provide.
 
 ## Git
 
@@ -25,7 +25,7 @@ This is already covered in the previous sections, if you still havent configured
 
 Assuming the same example as the section above, we'll see how git would have helped in your group project.
 
-Lets assume for now that just you are working on this project, and you wanted to track the changes you made to your report as you complete it,
+Lets assume for now that just alone are working on this project, and you wanted to track the changes you made to your report as you complete it,
 
 To start with lets create a new folder called `learning-git` , you can create this folder wherever you want.
 
@@ -55,8 +55,9 @@ A git development environment consists of three sections
 3. **Repository**  
    This is where your actual work and its history lies. you can sync repositories to other computers and expect the same copies to be present.
 
-To get a better view lets explain this concept with a example.
-You wanted to purchase some groceries for your home ( working directory ) so you go to the supermarket and add a couple of things to your shopping cart ( Staging Area ) and finally when you are done you purchase everything in your cart, and bring them back home ( Repository ). ( And the bill is the log ).
+// Might Exclude this example
+If you are still confused, here is a quick comparison with git and a real life scenario.
+You wanted to purchase some groceries for your home ( working directory ) so you go to the supermarket and add a couple of things to your shopping cart ( Staging Area ) and finally when you are done you purchase everything in your cart, and bring them back home ( Repository ).
 
 To view the current status of our git repository run the following command
 
@@ -70,11 +71,9 @@ To stage the file with git we can run the following command
 
 This command will add the file `cat.txt` into the git staging area, alternatively you can do `git add .` which will add all files in your folder into the git staging area ( when you dont want to manually specify each file )
 
-_If you are still confused about the staging area, its importance will be become clear as you progess._
+Once the files have been staged, they have to be moved to the repository, this is called a commit, commits are usually a logical chunk of change, you dont have to commit for every change you make to the file, in our example you can commit the file once you have completed a section of the report or such. Commits create snapshots of the repository, you can restore your repository to any commit at any time.
 
-Once the files have been staged, they have to be moved to the repository, this is called a commit, commits are usually a logical chunk of change, you dont have to commit for every change you make to the file, in our example youi can commit the file once you have completed a section of the report or such. Commits create snapshots of the repository, you can restore your repository to any commit at any time.
-
-Commits are always ( ideally ) associated with a commit message, the commit message makes it easier to understand the intent of the change, this is incredibly useful if you wanted to restore the repository into an earlier commit you made.
+Commits are ideally associated with a commit message, the commit message makes it easier to understand the intent of the change, this is incredibly useful if you wanted to restore the repository into an earlier commit you made.
 
 The following command is used to create a commit in git
 

@@ -2,7 +2,8 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
 class MyServer(BaseHTTPRequestHandler):
-    pass
+    def get(self, request):
+        pass
 
 
 addr = "127.0.0.1"
