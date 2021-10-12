@@ -139,3 +139,54 @@ for i in range(0,10,2):
 _Advanced Reading_ : _Python has a concept of iterators and generators. Iterators are objects that are used to iterate over a sequence. Generators are functions that return iterators. They are bit hard to understand at first but once you get them you will understand them very well. You can find a full list of iterators and generators in the [Python documentation](https://docs.python.org/3/glossary.html#term-iterator)._
 
 ### Exceptions and Handling them
+
+Errors are called Exception in the python world, Python provides a mechanism to handle errors in your code. This processs is called exception handling.
+
+More than often programs behaves in ways they are not supposed to, this might be caused by a bug in the code, wrong inputs given, missing files or a wide variety of other reasons. if we dont have exception handling the execution stops right after the error and the program is not able to continue. Exception handling solves this issue and allows us to define the way we want the program to behave in case of an error.
+
+```python
+numerator = 5
+denominator = 0
+print(numerator/denominator) # Causes an Exception and stops the execution
+print("This line will not be printed")
+```
+
+To solve the case above we can use the `try` and `except` keywords.
+
+```python
+try:
+    numerator = 5
+    denominator = 0
+    print(numerator/denominator) # Causes an Exception and moves to the execute block
+    print("This is still not printed")
+except ZeroDivisionError:
+    print("You cannot divide by zero")
+print("This line will be printed")
+```
+
+The try block is the code that we want to execute, the except block is the code that we want to execute if an error occurs.
+
+Note that the statements after the error in the try block is skipped, Once an error occurs the except block is executed and the program continues.
+
+We can specify what kind of exceptions we want to handle in the except block and even define seperate behaviour for different type of exceptions by creating multiple except blocks.
+
+We can also add generic exception handling by using the `except` keyword without specifying the exception type. This will handle all the exceptions that are not handled by the other except blocks. We can also add a finally block to the except block to execute code after the try block has been executed. The finally block is executed whether an error occurs or not.
+
+Exceptions in python can also be raised by the programmer, this is done using the `raise` keyword. This is useful when we want to force the execution to move to the except block. we can create new exceptions as well, we will learn about them in the next chapter
+
+Here is an example of exception handling with all the concepts explained till now.
+
+```python
+try:
+    numerator = 10
+    denominator = 0 # Change this to see different execution flows
+    print("Answer is" , numerator/denominator)
+    if denominator > 100:
+        raise ValueError("Denominator cannot be greater than 100")
+except ZeroDivisionError:
+    print("You cannot divide by zero")
+except:
+    print("An error occurred") # Catches the Value Error
+finally:
+    print("All operations have been completed")
+```
