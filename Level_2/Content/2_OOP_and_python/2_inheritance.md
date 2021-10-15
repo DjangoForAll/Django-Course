@@ -1,0 +1,3 @@
+# Inheritance
+
+One of the most important features of OOP is inheritance. Inheritance is a way to create new classes from existing classes. This is done by using the `class` keyword. The `class` keyword is followed by the name of the new class and the name of the existing class. The new class inherits all the methods and attributes of the existing class. The new class can also have its own methods and attributes. The new class is called a subclass while the existing class is called a superclass. The subclass can also override attributes and methods from a superclass ( create its own versions of attributes and methods ).
