@@ -25,11 +25,11 @@ This is already covered in the previous sections, if you still haven't configure
 
 Assuming the same example as the section above, we'll see how git would have helped in your group project.
 
-Let's assume for now that just alone is working on this project, and you wanted to track the changes you made to your report as you complete it,
+Let's assume for now that just alone is working on this project, and you wanted to track the changes you made to your report as you complete it.
 
-To start with let's create a new folder called `learning-git` , you can create this folder wherever you want.
+To start with let's create a new folder called `learning-git`, you can create this folder wherever you want.
 
-now that you have your folder created, open up a terminal/command prompt and navigate to your current directory, once you are inside your newly created folder run the following command.
+Now that you have your folder created, open up a terminal/command prompt and navigate to your current directory, once you are inside your newly created folder run the following command.
 
 ```git
 git init
@@ -37,10 +37,10 @@ git init
 
 \*_if this command returns an error then git has not been configured in your system, look back at earlier sections and make sure that git is installed correctly._
 
-This command creates a new git _Repository_, a Repository is similar to a project ( with version control ), now your unversioned project is a git repository.  
+This command creates a new git _Repository_, a Repository is similar to a project( with version control ), now your unversioned project is a git repository.  
 if you look closely you will see a new hidden folder `.git` created inside your folder, git uses this folder for all its bookkeeping, unless you are a git wizard don't try to edit anything in there.
 
-Now we have a really cool version-controlled project but its kinda empty, so let's create a new file in it, you can use your favorite code editor or Linux commands to create a new file in your folder. for the sake of consistency let's create a file called `cats.txt` containing the following text
+Now we have a really cool version-controlled project but its kinda empty, so let's create a new file in it, you can use your favourite code editor or Linux commands to create a new file in your folder. for the sake of consistency let's create a file called `cats.txt` containing the following text
 
 `Cats: A Brief Summary`
 
@@ -53,9 +53,9 @@ A git development environment consists of three sections
 1. **Working Directory**  
    This is simply the current state of files and folders inside your current folder, these changes are **_not_** yet recognized by git and are **_not_** tracked yet.
 2. **Staging Area**  
-   This is a temporary location for your files before they are saved to a repository. you can add more than one file to the staging area.
+   This is a temporary location for your files before they are saved to a repository. You can add more than one file to the staging area.
 3. **Repository**  
-   This is where your actual work and its history lies. you can sync repositories to other computers and expect the same copies to be present.
+   This is where your actual work and its history lies. You can sync repositories to other computers and expect the same copies to be present.
 
 To view the current status of our git repository run the following command
 
@@ -65,15 +65,15 @@ git status
 
 Once you run the command, git will inform you that you have created a new file. ( the file is still in the working directory )
 
-To stage the file with git we can run the following command
+To stage the file with git we can run the following command,
 
 ```git
 git add cat.txt
 ```
 
-This command will add the file `cat.txt` into the git staging area, alternatively, you can do `git add .` which will add all files in your folder into the git staging area ( when you don't want to manually specify each file )
+This command will add the file `cat.txt` into the git staging area, alternatively, you can do `git add .` which will add all files in your folder into the git staging area (when you don't want to manually specify each file)
 
-Once the files have been staged, they have to be moved to the repository, this is called a commit, commits are usually a logical chunk of change, you don't have to commit for every change you make to the file, in our example, you can commit the file once you have completed a section of the report or such. Commits create snapshots of the repository, you can restore your repository to any commit at any time.
+Once the files have been staged, they have to be moved to the repository, this is called a commit. Commits are usually a logical chunk of change, you don't have to commit for every change you make to the file. In our example, you can commit the file once you have completed a section of the report or such. Commits create snapshots of the repository, you can restore your repository to any commit at any time.
 
 Commits are ideally associated with a commit message, the commit message makes it easier to understand the intent of the change, this is incredibly useful if you wanted to restore the repository into an earlier commit you made.
 
@@ -83,7 +83,7 @@ The following command is used to create a commit in git
 git commit -m "Started to create a report on cats"
 ```
 
-This command will take all the files in staging and commit them to the git repository. Once you have committed, running `git status` again will let you know that you no longer have any changes, (Your working directory and the git repository are in sync now). Committing clears the staging area so that you can start working on your new changes.
+This command will take all the files in staging and commit them to the git repository. Once you have committed, running `git status` again will let you know that you no longer have any changes (Your working directory and the git repository are in sync now). Committing clears the staging area so that you can start working on your new changes.
 
 To view all your past commits you can use the log command
 
@@ -95,6 +95,6 @@ git log
 
 This command will show all the commits made in your repository along with who made the change.
 
-Now, make some changes to your report, you can add new content, delete existing content or even create new files. Once you are done, run `git diff` this will show all changes you have made in your working directory.
+Now, make some changes to your report. You can add new content, delete existing content or even create new files. Once you are done, run `git diff` this will show all changes you have made in your working directory.
 
-Now you have a basic idea of what git is and how to perform basic actions in git, Try making more changes in your folder and try to record those changes with commits to get familiar with git.
+Now you have a basic idea of what git is and how to perform basic actions in git. Try making more changes in your folder and try to record those changes with commits to get familiar with git.

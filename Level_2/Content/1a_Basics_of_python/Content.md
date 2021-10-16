@@ -1,5 +1,3 @@
-# Introduction to Python
-
 ## Getting Started
 
 ### What is a Program ?

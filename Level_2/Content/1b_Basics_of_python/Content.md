@@ -99,7 +99,7 @@ while i > 0:
     i = i-1 # decrement i by 1
 ```
 
-The simple program written above can be used to print the number from i to 0, be careful when working with loops because you can end up in an infinite loop. in the case above , if we were to remove the decrementing step, the code would print 10 forever ( like forever forerver! ) in case you do endup in an infinite loop use `ctrl + c` keys to stop the program.
+The simple program written above can be used to print the number from i to 0, be careful when working with loops because you can end up in an infinite loop. in the case above , if we were to remove the decrementing step, the code would print 10 forever ( like forever forerver! ) in case you do endup in an infinite loop use `ctrl + c` key combination to stop the program.
 
 We can also `break` out of a loop at any point. similarly we can also cause the loop to skip over some code by using `continue`.
 
