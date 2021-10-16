@@ -9,7 +9,7 @@ list_with_mixed_data_types = [1, "a", "b", "c", "d", "e"]
 length_of_list = len(list_with_numbers) # This will return the length of the list
 ```
 
-Lists are indexed starting from 0. so to the get the first element you have to ask from the 0th element.
+Lists are indexed starting from 0. so to get the first element you have to start from the 0th element.
 
 ```python
 list_with_numbers = [1, 2, 3, 4, 5]
@@ -17,9 +17,9 @@ print(list_with_numbers[0]) # prints 1
 ```
 
 Lists can be sliced ( create a new sublist from the list ) like this `list_variable[start:end]` (note that the start is included and the end is excluded).
-Lists can also be negatively indexed ie -1th index is the last element.
+Lists can also be negatively indexed ie -1 index is the last element.
 
-You can combine all these together to do a lot of things with lists.
+You can combine all these together to do a lot of operations with lists.
 
 ```python
 list_with_numbers = [1, 2, 3, 4, 5]
@@ -31,6 +31,8 @@ print(list_with_numbers[-3:]) # prints [3, 4, 5] ( the last three items with the
 ```
 
 Lists like strings comes with a bunch of methods like `.count()`, `.index()`, `.append()`, `.pop()`, `.remove()`, `.reverse()`, `.sort()` etc. You can find a full list of methods in the [Python documentation](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists). Explaining everything in detail is beyond the scope of this tutorial.
+
+Some examples of methods that can be used with lists are:
 
 ```python
 list_with_numbers = [1, 2, 3, 4, 5]
@@ -46,9 +48,25 @@ list_with_numbers.sort(reverse=True) # sorts the list in reverse order
 
 As you saw with strings try the dir() function with lists to see if you want to try everything first hand ( for the adventurous folks! )
 
+We can split a string into a list by using the split method.
+
+```python
+some_string = "This is a test"
+list_of_words = some_string.split(" ") # The argument to the split function is used to split the words by.
+print(list_of_words) # prints ['This', 'is', 'a', 'test']
+```
+
+Lists can be joined back into a string with the join method.
+
+```python
+list_of_words = ["This", "is", "a", "test"]
+joined_string = "-".join(list_of_words) # The argument to the join function is used to join the words by.
+print(joined_string) # prints "This-is-a-test"
+```
+
 ### Fun with lists
 
-given a list we can define a function and have python call the function with every item in the list. This is performed using the map function.
+given a list, we can define a function and have python call the function with every item in the list. This is performed using the map function.
 
 ```python
 some_names = ["John", "Jane", "Mary"]
@@ -59,11 +77,13 @@ print(list(map(say_hello, some_names))) # prints ["Hello John", "Hello Jane", "H
 
 This is just the tip of the iceberg!
 
-_Python comes with an immutable version of lists called `tuple`. Tuples do not support changes once initialised._
+_Python comes with an immutable version of lists called `tuple`. Tuples do not support changes once initialized._
 
 ### Dictionaries
 
-A dictionary in python is simply a collection of key value pairs, what are key value paris ? in real life this is like a contact name and a phone number they are always mapped together and given the contact name you can find out the phone number.
+A dictionary in python is simply a collection of key-value pairs, what are key-value pairs? in real life, this is like a contact name and a phone number they are always pairs mapped together, and given the contact name you can find out the phone number.
+
+- Note that this is a one-way mapping so given the key you get a value back, but you cant get the value back from the key. ( This is possible although not recommended )
 
 ```python
 contact_details = {

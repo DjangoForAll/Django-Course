@@ -1,8 +1,8 @@
 # Inheritance
 
-One of the most important features of OOP is inheritance. Inheritance is a way to create new classes from existing classes. This is done by using the `class` keyword. The `class` keyword is followed by the name of the new class and the name of the existing class. The new class inherits all the methods and attributes of the existing class. The new class can also have its own methods and attributes. The new class is called a subclass while the existing class is called a superclass. The subclass can also override attributes and methods from a superclass ( create its own versions of attributes and methods ).
+One of the most important features of OOP is inheritance. Inheritance is a way to create new classes from existing classes. This is done by using the `class` keyword followed by the name of the new class and the name of the existing class. The new class inherits all the methods and attributes of the existing class. The new class can also have its own methods and attributes. The new class is called a subclass while the existing class is called a superclass. The subclass can also override attributes and methods from a superclass ( create its own versions of attributes and methods ).
 
-Lets look at an example.
+Let's look at an example.
 
 ```python
 class LivingThing:
@@ -31,9 +31,9 @@ The above code creates a new object from the class Dog. The Dog class inherits a
 
 The Animal Class in turn inherits from the LivingThing class. The LivingThing class has a method called `breathe` which prints out the string `I am alive`.
 
-This is called inheritance. Specifically, In this case Multi Level Inheritance.
+This is called inheritance. Specifically, In this case, Multi-Level Inheritance.
 
-Classes can also override methods in its parents, this is used to redefine the behavior of a method.
+Classes can also override methods in their parents, this is used to redefine the behavior of a method.
 
 for example
 
@@ -48,7 +48,7 @@ my_turtle.move() # I am moving, but kinda slowly!
 my_turtle.breathe() # I am alive
 ```
 
-Similarly you can create attributes in the class and override them as well.
+Similarly, you can create attributes in the subclass and override them as well.
 
 like multilevel inheritance, python also supports multiple inheritance. This is used when we want to inherit from multiple classes.
 
@@ -71,10 +71,10 @@ ab.print_b() # B
 ab.print_ab() # AB
 ```
 
-Each python object has a method resolution order ( MRO ) which is a list of classes that are used to resolve the method. The MRO is used to determine which method to call when a method is called. Lets say that each of the inherited classes have the same function, to identify which method is called we use the MRO.
+Each python object has a method resolution order ( MRO ) which is a list of classes that are used to resolve the method. The MRO is used to determine which class to call when a method is called. Let's say that each of the inherited classes has the same function, to identify which method is called we use the MRO.
 
 ```python
-# Continue from above example
+# Continue from the above example
 
 print(ab.mro()) # [<class '__main__.AB'>, <class '__main__.A'>, <class '__main__.B'>, <class 'object'>]
 # The MRO is [AB, A, B, object] so the AB class is checked first then the A class and then the B class.
@@ -82,7 +82,7 @@ print(ab.mro()) # [<class '__main__.AB'>, <class '__main__.A'>, <class '__main__
 
 ## Mixins
 
-While developing web application you might come across common functionality that is shared between a number of classes, So in python each feature is built into different seperate classes and then you can combine them together to create a new class with the functionality you want.
+When developing applications you might come across common functionality that is shared between a number of classes, in python each feature can be built into different classes and then combined together to create a new class with the functionality required.
 
 In the above examples we created classes and defined functionality in them, another approach is to create classes with functionality and combine them together to create a new class.
 
@@ -108,4 +108,4 @@ class Human(RunnableMixin, WalkableMixin, TalkingMixin):
 
 ```
 
-Each of the feature classes are called Mixins. Mixins are extremely useful in web development to add new features to existing classes.
+Each of the feature classes is called a Mixin. Mixins are extremely useful in web development to add new features to existing classes.
