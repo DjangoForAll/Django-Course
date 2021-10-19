@@ -1,5 +1,3 @@
-# Introduction to Version Control Systems
-
 Version control systems are vital to almost every development workflow, we'll take a quick look at why it exists and how to start using it for software development.
 
 _If you are already familiar with version control systems like git, you can take this time to understand exactly how it works internally._

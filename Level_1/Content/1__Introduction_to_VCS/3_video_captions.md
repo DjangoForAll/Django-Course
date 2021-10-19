@@ -16,7 +16,9 @@ This error pops up becuase our folder is not a git repository yet , to convert i
 
 git init converts an unversioned folder into a git version controlled repository
 
-If we quickly run the command git status we can see that the folder is now a git repository and that we have a .git folder inside it,
+If we quickly run the command git status we can see that the folder is now a git repository
+
+if we try to list all the files and folders in this folder including hidden files, we can observet that have a .git folder created now, git uses this folder for all its bookeeping and its best that we dont meddle with it
 
 Now we have a git repository we can view the status of the repository and it shows all the information related to it
 
