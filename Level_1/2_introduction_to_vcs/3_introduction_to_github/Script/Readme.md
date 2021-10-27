@@ -22,5 +22,3 @@ you can you the pull command if there are changes made by someone else
 once the changes are pushed you can see that the changes are reflected in github, the commit log as well as the file chanes can be viewed in the UI
 
 you can fork projects
-
-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
