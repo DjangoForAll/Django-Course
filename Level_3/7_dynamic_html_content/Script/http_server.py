@@ -21,7 +21,6 @@ class MyServer(SimpleHTTPRequestHandler):
         # print(html, html.encode("utf-8"))
         # # Writing the HTML contents with UTF-8
         # self.wfile.write(html.encode())
-
         return
 
 

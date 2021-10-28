@@ -2,9 +2,9 @@ A simple http server does not really let us create content on the go, It just li
 
 Lets create a custom server in python that can serve dynamic content.
 
-lets create an empty class from the `SimpleHTTPRequestHandler` class from the http.server module
+## Start with a new python file.
 
-Once we have a class we can start python to start listening on a port and address and invoke the class we created for requets.
+I'll be pasting this snippet to save time typing it out
 
 ```python
 from http.server import HTTPServer, SimpleHTTPRequestHandler
@@ -16,6 +16,10 @@ server_address = (address, port)
 httpd = HTTPServer(server_address, MyServer)
 httpd.serve_forever()
 ```
+
+we are creating an empty class from the `SimpleHTTPRequestHandler` class from the http.server module
+
+Once we have a class we can start python to start listening on a port and address and invoke the class we created for requets.
 
 Once we run the file,we can see that the same directory listing page is up again,
 
