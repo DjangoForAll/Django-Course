@@ -1,4 +1,4 @@
-Now that we have an html page we can quickly take a look at styling our page,
+Lets also take a quick refresher on styling web pages.
 
 CSS is a language that allows us to style our html page. CSS was designed to seperate the styling of our html page from the html content itself. This means that we can reuse the css designs for multiple pages. The seperation of styles and content allows the same page to behave differently based on how the page is being viewed, such as if the page is being viewed in a mobile device, a desktop device, if the page is being printed or even if it is read by a voice over tool.
 
@@ -44,3 +44,5 @@ To create seperate css files we use the following syntax:
 This element is added to the head of the html document, This is not mandatory, but is reccomended.
 
 CSS Stands for Cascading Style Sheets, Its called cascading because the style is applied on a priority basis, the style from the stylesheet gets the least priority while the inline style gets the highest priority, that way you can override changes if needed.
+
+To take a look at all the valid CSS properties, Visit this [page](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index)

@@ -1,4 +1,4 @@
-To get started with web development, lets learn a simple frontend language called HTML.
+lets Refresh our HTML Skills, You might have already learned about HTML, Lets quickly review how it works.
 
 ### HTML (_Hyper Text Markup Language_)
 
@@ -39,4 +39,7 @@ Some examples are:
 
 Here `h1` is the tag for the largest heading. The content is between the tags. `align` is an attribute that is used to align the content. `center` is the value of the attribute align.
 
-Before we move to the next section, Lets look we can develop html documents in your dev environment.
+Html provides a lot of standard tags for building webpages.  
+You can visit the following link to see a list of all the tags and how they can be used
+
+[MDN Mozilla Html Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)

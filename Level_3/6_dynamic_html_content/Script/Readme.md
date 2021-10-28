@@ -4,26 +4,34 @@ Lets create a custom server in python that can serve dynamic content.
 
 ## Start with a new python file.
 
-I'll be pasting this snippet to save time typing it out
+I'll be pasting this snippet to start a simple server, we will explore this snippet line by line
 
 ```python
 from http.server import HTTPServer, SimpleHTTPRequestHandler
+
 class MyServer(SimpleHTTPRequestHandler):
     pass
+
 address = "127.0.0.1"
-port = 8080
+port = 8000
 server_address = (address, port)
 httpd = HTTPServer(server_address, MyServer)
 httpd.serve_forever()
 ```
 
+as you can see we are importing the http.server module , the same module we used in the last chapter to start the directory listing server.
+
 we are creating an empty class from the `SimpleHTTPRequestHandler` class from the http.server module
 
-Once we have a class we can start python to start listening on a port and address and invoke the class we created for requets.
+We are not writing any logic in it yet, it is currently just inheriting everything from the `SimpleHTTPRequestHandler` class
+
+We have also created variables for address and port, this simply refers to the address the server should listen at to serve requests, The HTTPServer method listens in the given address and port combination and calls the Myserver class when a request has been recieved, Finally we ask python to serve forever, the server is stopped only when we exit the program.
 
 Once we run the file,we can see that the same directory listing page is up again,
 
-We have learned about inheritance and overriding in the previous level, Here we have created a new class from the BaseClass, to create new functionality we have to override some its methods
+We have learned about inheritance and overriding methods in the previous level, Here we have created a new class from the BaseClass, to create new functionality we have to override some its methods
+
+--
 
 lets first try overriding the `do_GET()` method, this method is invoked when the client sends a GET request to the server.
 when we override the method, we can place custom logic and control how the page is rendered.
