@@ -26,3 +26,9 @@ If it works, you should see the `Hello World` printed out.
 This is the recommended way to execute python files. First, save your file with the `.py` extension.
 
 Then open up your terminal and type in `python filename.py` to execute the file.
+
+--
+
+If the python plugin for VS Code is not installed by default you can install it by following this [tutorial](https://code.visualstudio.com/docs/python/python-tutorial)
+
+If autoformatting does not work out of the box, follow this [tutorial](https://marcobelo.medium.com/setting-up-python-black-on-visual-studio-code-5318eba4cd00) to get it up and running.

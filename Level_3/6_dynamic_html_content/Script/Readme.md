@@ -27,16 +27,20 @@ We are not writing any logic in it yet, it is currently just inheriting everythi
 
 We have also created variables for address and port, this simply refers to the address the server should listen at to serve requests, The HTTPServer method listens in the given address and port combination and calls the Myserver class when a request has been recieved, Finally we ask python to serve forever, the server is stopped only when we exit the program.
 
+--
+
 Once we run the file,we can see that the same directory listing page is up again,
 
 We have learned about inheritance and overriding methods in the previous level, Here we have created a new class from the BaseClass, to create new functionality we have to override some its methods
-
---
 
 lets first try overriding the `do_GET()` method, this method is invoked when the client sends a GET request to the server.
 when we override the method, we can place custom logic and control how the page is rendered.
 
 after overriding the do_GET() method, we can see that we get an error instead of the directory listing, this is because we have not implemented the logic to handle the request.
+
+Lets start writing some logic to handle our requests
+
+--
 
 Every HTTP Request Response should have a status code, this status code is used to indicate the status of the request. Clients can then use this information to determine if the request was successful or if any further action is needed.
 
@@ -56,6 +60,8 @@ Similaryly, we can change the status code to 500 to indicate that the server enc
 
 Generally the 200 series of status codes indicate success, the 300 series indicate that the client should take an action to resolve the issue like redirecting to the login page when you try to access a reosource, and the 400 series indicate that the request was malformed and the 500 series indicate that the server encountered an error.
 
+--
+
 I will leave a link with all the available status codes in HTTP. You can try to render each one and see what happens.
 
 Apart from the status code, the server also sends some metainformation along with the response, these are called header. For the scope of this level we will be looking into the content type header, this header specifies what kind of content we are sending back to the client, for example, if we are sending a html page, then the content type header should be set to text/html, if we are sending text files, the content type should be set to text/plain, and so on.
@@ -70,16 +76,20 @@ Nothing happens when the load the page becuase there is no content to render yet
 
 Now lets create some html and try sending that back to the client.
 
+--
+
 ```python
 content = "<h1>Hello World!</h1>"
 self.wfile.write(content.encode())
 ```
 
-self.wfile.write() is a method that sends the response back to the client. decode() is a string method that converts the string to bytes since the response is in bytes.
+self.wfile.write() is a method that sends the response back to the client. encode() is a string method that converts the string to bytes since the response is in bytes.
 
 Now lets view our page again and see what happens.
 
 There you go, we have created our very own server!
+
+You can try and edit the content type
 
 Lets Make this a bit more dynamic, Lets add the current time to the response
 

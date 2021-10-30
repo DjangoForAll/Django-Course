@@ -1,4 +1,4 @@
-### Variables and Data Types
+## Variables and Data Types
 
 let's try to build a program that doubles a given number.
 
@@ -15,11 +15,11 @@ salutation = "Hello" # string
 is_even = True # boolean
 ```
 
-you can name the variables anything you want but the standard way to name variables is to use [snake cases](https://en.wikipedia.org/wiki/Snake_case) ( lowercase words separated by underscores like snake_case ), this is the convention used by python.
+you can name the variables anything you want, by convention the variable names should be in [snake cases](https://en.wikipedia.org/wiki/Snake_case) ( lowercase words separated by underscores like snake_case )
 
 variable names should be descriptive, they should be meaningful and easy to understand. they should not start with a number and they should not be a [reserved keyword](https://docs.python.org/3.9/reference/lexical_analysis.html?highlight=reserved#keywords) ( these are special words that python users like `print` naming variables with these names can cause unexpected results ).
 
-### Converting Data Types
+## Converting Data Types
 
 The process of converting one data type to another is called type conversion. type conversion can be Implicit or Explicit in python.
 
@@ -50,10 +50,10 @@ some_int = int(some_variable) # explicit type conversion ( Value is floored )
 print(some_int * 2) # prints 2
 ```
 
-The int() function converts a given data type into an integer, similarly, float() converts a given data type into float.
-similar functions exist for other data types like str(), bool(). the exact definition and usage of functions will be explained later.
+The `int()` function converts a given data type into an integer, similarly, `float()` converts a given data type into float.
+similar functions exist for other data types like `str()`, `bool()`. the exact definition and usage of functions will be explained later.
 
-- Note that converting a float to an int will truncate the decimal part of the number. (Flooring the number)
+> Note that converting a float to an int will truncate the decimal part of the number. (Flooring the number)
 
 Trying to convert a non-numeric string to an int will result in an exception.
 
@@ -68,7 +68,7 @@ variable_a = "john" # string
 variable_b = int(variable_a) # Raises Exception since john cannot be converted to int
 ```
 
-### Strings in Python
+## Strings in Python
 
 python has a lot of built-in functions that can be used to manipulate functions, some of them are explained in the following program.
 
@@ -87,13 +87,13 @@ print(some_string.swapcase()) # Returns a copy of the string in swapcase
 Try running this in your python interpreter and see what happens. A neat little hack in python to see all the functions available is to type `dir()` and see what functions are available.
 
 ```python
-some_string = "hello world, This is A test"
+some_string = "hello world, This is a string"
 print(dir(some_string)) # prints all the functions available with strings
 ```
 
 now try each of the functions you get after running the snippet above and see what happens. you can try this with other types as well and see what happens.
 
-### F strings
+## F strings
 
 F strings are a relatively new addition to python ( since 3.6 ), they are a way to format strings in python.
 

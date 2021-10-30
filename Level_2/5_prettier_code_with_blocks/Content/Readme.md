@@ -1,9 +1,9 @@
-### Blocks in Python
+## Blocks in Python
 
 Python programs get structured through indentation, i.e. code blocks are defined by their indentation. it's a language requirement, not a matter of style. This principle makes it easier to read and understand Python code.
 All statements with the same distance to the right belong to the same block of code, The block ends at a line less indented or the end of the file. If a block has to be more deeply nested, it is simply indented further to the right.
 
-### Functions in Python
+## Functions in Python
 
 Functions in python are a group of statements (code block) that may or may not take inputs and may or may not return values. Functions are usually used when you want to repeatedly call a piece of code without writing the same code over and over again.
 
@@ -30,7 +30,16 @@ print(greet("Jane", "Good Afternoon")) # prints "Good Afternoon Jane"
 print(greet(name="John")) # we can also pass parameters to the function by name, that way we can change the order of the parameters
 ```
 
-### Conditionals in Python
+To create functions without any statements in them use the `pass` statement
+
+```python
+def greet():
+    pass
+
+greet() # Returns None
+```
+
+## Conditionals in Python
 
 We have discussed the boolean datatype earlier, we can leverage this datatype to create conditionals in Python.
 
