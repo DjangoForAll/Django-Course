@@ -1,5 +1,3 @@
-## Encapsulation
-
 Encapsulation is the process of wrapping the data and code together to prevent data from being accessed by other parts of the program. This is done so that we don't manually change the attributes of the object, which could cause unexpected results.
 
 ```python

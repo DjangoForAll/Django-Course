@@ -21,7 +21,7 @@ print(john.name) # Prints out Person
 # We can access by using the dot notation : <obj_variable>.<class_variable>
 ```
 
-- Note that class names are always in [UpperCamelCase](https://en.wikipedia.org/wiki/Camel_case)
+> Note that class names are always in [UpperCamelCase](https://en.wikipedia.org/wiki/Camel_case)
 
 Now we have a class but it doesn't really do anything, to add some functionality let's look into a method called the constructor.
 
