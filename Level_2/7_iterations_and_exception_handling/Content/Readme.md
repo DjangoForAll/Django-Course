@@ -1,4 +1,4 @@
-### Iterations in Python
+## Iterations in Python
 
 Iterative statements are used to execute a block of code multiple times. usually, until a given condition has been reached. python has a few ways to do this, let's start with the `while` statement first.
 
@@ -48,7 +48,7 @@ for i in range(0,10,2):
 
 _Advanced Reading_ : _Python has a concept of iterators and generators. Iterators are objects that are used to iterate over a sequence. Generators are functions that return iterators. They are a bit hard to understand at first but once you get them you will understand them very well. You can find a full list of iterators and generators in the [Python documentation](https://docs.python.org/3/glossary.html#term-iterator)._
 
-### Exceptions and Handling them
+## Exceptions and Handling them
 
 Errors are called Exceptions in the python world, Python provides a mechanism to handle errors in your code. This process is called exception handling.
 

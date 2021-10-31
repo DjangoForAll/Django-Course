@@ -1,4 +1,4 @@
-We have a server that can render dynamic content, but it can only render one page, most websites have multiple pages that you can navigate to, Dynamic routing enables you to render content based on what path the user currently is in.
+In the last video we have created a server that can render dynamic content, but it can only render one page, most websites have multiple pages that you can navigate to, Dynamic routing enables you to render content based on what path the user currently is in.
 
 To get the current path the user is in, we can use the path attribute of the class
 

@@ -1,4 +1,4 @@
-### Lists
+## Lists
 
 As the name suggests, a list is a collection of items. these items can be of any data type. lists are very flexible you can add/remove items in a list if needed, lists are mutable as in you can change the value of an item in a list.
 
@@ -64,7 +64,13 @@ joined_string = "-".join(list_of_words) # The argument to the join function is u
 print(joined_string) # prints "This-is-a-test"
 ```
 
-### Fun with lists
+Lists can have all sorts of data types in them. You can even have lists inside of lists.
+
+```python
+list_cordinates = [[1,0] , [2,0], [3,0]]
+```
+
+## Fun with lists
 
 given a list, we can define a function and have python call the function with every item in the list. This is performed using the map function.
 
@@ -79,11 +85,11 @@ This is just the tip of the iceberg!
 
 _Python comes with an immutable version of lists called `tuple`. Tuples do not support changes once initialized._
 
-### Dictionaries
+## Dictionaries
 
 A dictionary in python is simply a collection of key-value pairs, what are key-value pairs? in real life, this is like a contact name and a phone number they are always pairs mapped together, and given the contact name you can find out the phone number.
 
-- Note that this is a one-way mapping so given the key you get a value back, but you cant get the value back from the key. ( This is possible although not recommended )
+> Note that this is a one-way mapping so given the key you get a value back, but you cant get the value back from the key. ( This is possible although not recommended )
 
 ```python
 contact_details = {
@@ -104,4 +110,16 @@ print(contact_details.keys()) # prints ["John", "Jane"]
 print(contact_details.values()) # prints ["1234567890", "0987654321"]
 print(contact_details.get("Jane")) # prints 0987654321
 print(contact_details.get("Mary", "Not found")) # prints Not found
+```
+
+Dictionary values can be of any datatype , even dictionaries themselves!
+
+```python
+contact_details = {
+    "Mary": {
+        "address": "123 Main Street",
+        "state": "NY",
+        "phone": ["1234567890" , "9876543210"]
+    }
+}
 ```
