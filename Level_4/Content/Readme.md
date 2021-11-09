@@ -1,0 +1,6 @@
+- Introduction to pip and python package management
+- Why we need virtual environments and how to create and start using one
+- Why do we need to have web frameworks and introduction to django ( Textual )
+- Creating a new django project and how to start the django server
+- How Django projects are structured and how to create a new route and a view (Class and Function Based) - Only HTTPResponse and JSONResponse
+- Template rendering with Jinja
