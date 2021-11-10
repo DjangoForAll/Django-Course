@@ -1,18 +1,8 @@
 The aim of this chapter is to get you familiar with the basics of the internet and some associated terminology. This will make it easier to follow the rest of the course.
 
-Let's start with a quick introduction to the internet.
-
-Internet is the backbone for the web, Simply put it's a bunch of computers connected together to share the best cat gifs.
-The web or World wide web is a collection of websites that are all connected to each other.
-
-you must have heard the term HTTP before, HTTP (HyperText Transfer Protocol) is one of the protocols used to transfer data over the internet.
-Protocols are a set of rules that define how the data is sent over the internet. you can imagine the HTTP protocol as a waiter in a restaurant, you tell them what you want and they ask a cook to make the dish and serve it once it's made.
-
-[HTTPS](https://developer.mozilla.org/en-US/docs/Glossary/https) is the same as HTTP but more secure.
-
 ## Dynamic and Static Web Pages
 
-When browsing the web you might see pages that don't change no matter who views it or where you view it from, these are called static web pages, we'll learn how to make static web pages at this level
+When browsing the web you might see pages that don't change no matter who views them or where you view them from, these are called static web pages, we'll learn how to make static web pages at this level
 Most of the pages you visit will be dynamic, these are pages that are generated just for you, they are newly generated just for you by servers ( specifically web servers ).
 
 ## FrontEnd vs BackEnd
@@ -30,6 +20,8 @@ In modern applications, the Front End and Back End are developed and maintained 
 In the context of a Todo App, the frontend might perform API calls to fetch existing todo's, create a new todo item, mark an item as completed, etc. These API requests perform a certain action.
 
 Now that we know that the frontend and backend communicate, we can talk about the data that is being sent and received. Usually, when the frontend requests data from the backend, the backend sends back data in the form of JSON. Note that JSON is not the only way for data interchange, you can also use XML, or even just plain text. JSON is the most common format for data interchange in modern applications.
+
+JSON Stands for JavaScript Object Notation, it was based on a subset of the Javascript Programming language. Even though JSON is based on Javascript, it is a language-independent data format, as in it can be used in any programming language.
 
 Let's look at a JSON Response for a Todo App.
 

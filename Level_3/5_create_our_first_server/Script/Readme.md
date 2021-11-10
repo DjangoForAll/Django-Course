@@ -26,4 +26,4 @@ We can add some sample text into our html page and then refresh our directory li
 
 There you have it, a simple http server that can be used to render html files. You can use this to test out how your html code renders.
 
-Try creating different types of files and see how the server renders them.
+Try creating different types of files and see how the browser renders them.
