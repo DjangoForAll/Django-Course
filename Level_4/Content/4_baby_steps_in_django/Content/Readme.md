@@ -56,3 +56,5 @@ This starts a development server at localhost:8000 , visit the page and see what
 Now that Django is up and running lets modify some of the files and try to create some content.
 
 --
+
+> With each chapter I will be providing you with the corresponding official Django Documentation page, Django has excellent documentation and almost everything you will ever need is present in it. Reading the documentation is highly reccomended.
