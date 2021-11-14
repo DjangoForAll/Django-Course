@@ -4,3 +4,4 @@
 - Creating a new django project and how to start the django server
 - How Django projects are structured and how to create a new route and a view (Class and Function Based) - Only HTTPResponse and JSONResponse
 - Template rendering with Jinja
+- Recieving form data
