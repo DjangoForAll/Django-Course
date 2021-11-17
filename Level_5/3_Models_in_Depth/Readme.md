@@ -30,3 +30,5 @@ Similar to CharFields we have a bunch of other fields, You can take a look at al
 Similar to the `CharField`, The `TextField` is used to store charecters but `TextField` does not impose any restrictions on the size of the data, Boolean Fields store boolean values (True/False) , the default parameter can be used in any field to set the default value of the field.
 
 Now that we have a model created, we need to ask django to sync the schema with the database,
+
+> Note that you can have as many models as you want, You can try creating multiple classes if needed
