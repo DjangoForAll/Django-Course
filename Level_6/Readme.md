@@ -1,4 +1,4 @@
-- Introduction to Class based components
+- Introduction to Class based views
 - Django Forms and Leveraging them
 - Django Model Views to make life easier
 - How Django Handles Authentication
