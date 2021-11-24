@@ -42,4 +42,4 @@ router.register("task", TaskViewSet)
 
 and that's it! You have a working REST API, you can Create/Retrieve/Update/Delete tasks via API! try it out in your browser.
 
-That wasn't too hard right? When code gets this generic there is always a downside to it, we have a working API but absolutely no clue what is happening behind the scenes. Which leads to a very steep learning curve, To master DRF, lets understand how the ModelViewSet class works.
+That wasn't too hard right? When code gets this generic there is always a downside to it, we have a working API but absolutely no clue what is happening behind the scenes. Which leads to a very steep learning curve, To master DRF, we need to understand how it works internally.
