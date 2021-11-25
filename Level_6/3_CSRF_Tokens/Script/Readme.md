@@ -1,6 +1,6 @@
 Before we start with creating the new view , lets first move the task creation view into a seperate template, so it's easier to understand, To move to a seperate template, lets create a template called task_create.html and create a new view to render the form.
 
-We already learned about get and post methods, usually its convention to use the get method to render the form and the post method to accept the data from the form, that way all the creation realated views fall under the same route, This again is not a requirement, but it makes it easier to understand.
+We already learned about get and post methods, usually its convention to use the get method to render the form and the post method to accept the data from the form, that way all the realated views fall under the same route, This again is not a requirement, but it makes the view easier to understand.
 
 Lets start by creating the new template task_create.html
 
@@ -18,7 +18,7 @@ Now let's create a new url route called create-task and create a corresponding c
 path('create-task' , CreateTaskView.as_view() )
 ```
 
-Note that all classnames are written in camelcases where every word's first letter is capitalized
+> Note that all classnames are written in camelcases where every word's first letter is capitalized
 
 The Class will have the following defenition
 
@@ -49,7 +49,7 @@ These types of attacks are called Cross-site request forgery (CSRF) attacks. and
 
 Django create a random token for every request that renders a form and remembers the token when the data is sent back, so the server can verify that the request is legitimate, and not a CSRF attack.
 
-If you wanted to add a task to your task management app, when you get to the task create page, Django will add a hidden value to the form called csrfmiddlewaretoken, this value is sent over along with the data in the form, when Django recieves a POST request, it will check if the token is present and valid, if a random form is submitted, it wont have the token and hence Django will reject the request.
+If you wanted to add a task to your task management app, when you get to the task create page, Django will add a hidden value to the form called `csrfmiddlewaretoken`, this value is sent over along with the data in the form, when Django recieves a POST request, it will check if the token is present and valid, if a random form is submitted, it wont have the token and hence Django will reject the request.
 
 To add a csrf token to the form, you can edit the html as follows,
 

@@ -1,4 +1,4 @@
-Now that we have our List, Create and Update Views, we can create our missing Views, The Detail and delete view
+Now that we have our List, Create and Update Views, we can create our missing View, The Detail view
 
 The detail view is very similary to the list view, but instead of showing all the items, we just show one item in detail.
 
@@ -34,7 +34,3 @@ Finally we can add the link to view the details of the object in the list view.
 ```html
 <a href="tasks/{{ task.id }}">detail</a>
 ```
-
-You can also create a delete view for deleting the object. Django's generic class DeleteView is used for this purpose.
-
-< add if needed >

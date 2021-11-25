@@ -77,6 +77,4 @@ you must be wondering why there is a `perform_create` method, can't we just call
 
 Well this is where things get intresting, These methods can be overridden to add custom logic into it, instead of completely rewriting the entire view to add changes, we can just override the perform_create method to add the logic.
 
-Take a look at the other serializers and try to guess how they work!
-
-We will take a look at a kitchen sink example now, a kitchen sink examples show all the different options that are available
+Take a look at the other mixins and try to guess how they work!

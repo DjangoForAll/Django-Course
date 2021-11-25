@@ -1,6 +1,6 @@
 Till now we were creating forms manually, but Django provides a way to abstract the form creation as well, lets see how that works.
 
-Similar to `ListView` which we saw earlier to abstract the listing of objects, CreateView abstracts objcect creation.
+Similar to `ListView` which we saw earlier to abstract the listing of objects, CreateView abstracts object creation.
 
 Lets create a class based view for the `Task` model.
 
@@ -69,15 +69,11 @@ class TaskCreateForm(ModelForm):
 
 ```
 
-the form class dynamically searches for methods with the name `clean<fieldname>` and calls them when the form is validated. The clean methods should return the cleaned value, Lets say that you wanted to keep the title in uppercase, you could do operations like that here.
+the form class dynamically searches for methods with the name `clean_<fieldname>` and calls them when the form is validated. The clean methods should return the cleaned value, Lets say that you wanted to keep the title in uppercase, you could do operations like that here.
 
 Raising Validation Errors wont actually stop execution here, instead Django forms will catch it and display the error in the form.
 
-Similar to the clean methods, the form class also has a couple of methods that are called when the form is submitted, we will look at all of them in this example.
-
-```python
-Insert Code here
-```
+Similar to the clean methods, the form class also has a couple of methods that are called when the form is submitted, I'll leave documentation regarding all the possible methods in the text.
 
 Placing the right logic in the right method allows you to reuse the same form for multiple usecases, lets try and create an update view for our tasks.
 
@@ -113,4 +109,4 @@ Now lets revisit the listing page and try the update button. And it works as exp
 
 Any logic you had in the create view is now shared in the update view as well.
 
-The beauty of generics comes during changes in models and strucutures, if you decide to add a new field to the model, you just need to specify if the field needs to be updated or not and django takes care of the rest!
+The beauty of generics comes during changes in models and structures, if you decide to add a new field to the model, you just need to specify if the field needs to be updated or not and django takes care of the rest!

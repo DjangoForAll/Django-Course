@@ -1,6 +1,6 @@
-Till now we were using Function Based Views, to reiterate the view was the function that converted a Request into a Response
+Till now we were using Function Based Views ( to reiterate the view was the function that converted a Request into a Response )
 
-Classes allow us to easily inherit other classes and override certain required behaviour, which makes them better suited for reusing Django's views.
+While functions can get the job done, Classes allow us to easily inherit other classes and override certain required behaviour, which makes them better suited for reusing views.
 
 Lets first take a look at a simple Class-Based View
 
@@ -12,7 +12,7 @@ class TodoView(View):
         return HttpResponse('Hello World')
 ```
 
-Notice that we are inheriting the base class `View` and then overriding a method called `get`, the get method handles the `GET` request, similary `post` handles the `POST` request and so on.
+Notice that we are inheriting the base class `View` and then overriding a method called `get`, the get method handles the `GET` request, similary the `post` method handles the `POST` request and so on.
 
 Now we have to change our url defenition to point to our class based view, since we used to give views as the arguments in the urls, we have to convert our newly ceated class into a view, Django provides a built in method to convert a class into a view called `as_view`
 
@@ -49,7 +49,7 @@ By default, django will pass in an object called `object_list` to the template, 
 
 lets change our html template to accept the template variable `object_list` and now we have a generic view that can be used to list all the tasks.
 
-In our generic class, we have an attribute called model, Django by default tries to get all the objcets from that model and pass them to the template.
+In our generic class, we have an attribute called model, Django by default tries to get all the objects from that model and pass them to the template.
 
 We can edit that behaviour by passing in a queryset instead of a model
 
@@ -61,7 +61,7 @@ class TaskListView(ListView):
 
 Now we only show the non-deleted tasks.
 
-What about the search functionality? the search functionality is dynamic, ie the queryset changes based on the queryset, This is also something that can be done with generic views.
+What about the search functionality? the search functionality is dynamic, ie the queryset changes based on the request, This is also something that can be done with generic views.
 
 Almost all attributes in the class also has a corresponding `get_<attribute>` method that is used to dynamically fetch the value of the object.
 
