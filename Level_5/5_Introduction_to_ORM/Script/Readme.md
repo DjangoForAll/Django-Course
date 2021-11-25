@@ -1,5 +1,3 @@
--- Video Only
-
 Now that we have a Model and its schema updated in the database, we can start learning the ORM.
 
 The Django ORM is a clever piece of engineering that lets you interact with the database in a very natural way, no complicated languages or libraries required.
@@ -33,7 +31,7 @@ And that's it! Just one line changed and we are now writing to a database. if yo
 
 Django in the background checks the data is correct, and if everything is good, it will generate an SQL query to insert data into the tasks table and run the query on the database.
 
-and now to retrieve the data from the database we can overwrite the get_tasks_view function.
+and now to retrieve the data from the database we can rewrite the get_tasks_view function.
 
 ```python
 def tasks_view(request):
@@ -84,7 +82,7 @@ if search_term:
 
 all_tasks is the variable that stores the current queryset, we then applied a filter to it, filtering the data based on the search term. currently we check if the term is exactly the same as title.
 
-This is kinda useless becuase we have to search for the exact term to fetch it, lets build a better version of the serach.
+This is kinda useless becuase we have to search for the exact term to fetch it, lets build a better version of the search.
 
 Lets change the part where we filter the data based on the search term.
 
@@ -92,7 +90,7 @@ Lets change the part where we filter the data based on the search term.
 all_tasks = all_tasks.filter(title__icontains=search_term)
 ```
 
-This performs a contains search instead of a exact search. The `i` in the `icontains` is to make the serach case insensitive. `title__icontains=search_term` is used when you want a case sensitive search.
+This performs a contains search instead of a exact search. The `i` in the `icontains` is to make the serach case insensitive. `title__contains=search_term` is used when you want a case sensitive search.
 
 Now if we try it out, we can see that the search works just fine!
 
@@ -121,6 +119,6 @@ def delete_tasks_view(request,index):
     return HttpResponseRedirect("/tasks")
 ```
 
-`delete` is a method of the queryset class that deletes the row from the database, we first filtered the data to match the id and then deleted it.
+`delete` is a method of the queryset class that deletes rows from the database, we first filtered the data to match the id and then deleted it.
 
 Thats it! Our Application is now working with databases.

@@ -47,4 +47,6 @@ def tasks_view(request):
 
 instead of the `all` method that returns all the rows, we are calling the `filter` method with the condition `deleted=False` that only fetches rows that are not deleted.
 
+> ORM Queries are chained, so if you have two filter methods, both of them are applied to the queryset.
+
 And Now our application support soft deletion as well!

@@ -1,4 +1,4 @@
-Till now we were using libraries that were packaged with the standard python installation ( `htttp.server` ), Now we will be looking at a package manager for python called pip. pip will allow us to install external libraries ( libraries that developer by other folks ) with ease.
+Till now we were using libraries that were packaged with the standard python installation ( `htttp.server` ), Now we will be looking at a package manager for python called pip. pip will allow us to install external libraries ( libraries that are developed by other folks ) with ease.
 
 Python packages are usually hosted at [PyPI](https://pypi.org/), PyPI is free and anyone can upload their own package into it, Packages from PyPI can be installed using pip.
 

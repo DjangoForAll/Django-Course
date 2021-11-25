@@ -34,4 +34,4 @@ INSTALLED_APPS = [
 ]
 ```
 
-> Note that djano's own apps are also declared here, you can see them listed before our app.
+> Note that djano's own apps are also declared here, you can see them listed before our app. The Django Project is just a collection of apps.

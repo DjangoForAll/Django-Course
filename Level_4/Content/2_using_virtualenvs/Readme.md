@@ -1,4 +1,4 @@
-Python packages are global by default. That means that if you install a package in your machine, this package is availiable in all projects you have on your machine. Although this sounds really good, it limits projects with conflicting dependencies ( Say you were working on two projects which used different versions of the same package ) To solve this issue we can use virtualenvs.
+Python packages are global by default. That means that if you install a package in your machine, this package is availiable in all projects you have on your machine. Although this sounds really good, it limits projects with conflicting dependencies ( Say you were working on two projects which used different versions of the same package ) To solve this issue we can use virtualenvs (virtual environments).
 
 Virtualenvs create an isolated environment where you can install packages and experiment freely without affecting the rest of your machine. You can create as many virtualenvs as you want. Another advantage of virtualenvs is that they dont require permissions to install packages, installing global packages usually required you to have root access.
 
@@ -18,7 +18,7 @@ virtualenv .env
 
 This command will create a new virtual environment under the .env folder, This is usually where the environment resides , feel free to name it something other than .env
 
-At this point you can take a look at your current folder and you should see a folder called .env ( or whatever you named it ), this is the folder where your virtual environment will reside.
+At this point you can take a look at your current directory and you should see a new folder called .env ( or whatever you named it ), this is the folder where your virtual environment will reside.
 
 To activate your virtual environment run the following command:
 
@@ -42,6 +42,6 @@ You can deactivate the virtual environment by running the following command:
 deactivate
 ```
 
-Try running the `which` commnand to make sure that the virtual environment is no longer active.
+Try running the `which` commnand again to make sure that the virtual environment is no longer active.
 
 Make sure that you are always activating the **right** environment before you start working on your project.

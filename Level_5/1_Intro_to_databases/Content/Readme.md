@@ -12,15 +12,15 @@ Relational databases store data in tables,
 
 You can think of relational databases as a really complex version of excel or google spreadsheets.
 
-You can visualise relational tables as a bunch of columns and rows. columns are called attributes or fields and rows are called records or rows.
+You can visualise relational tables as a bunch of columns and rows. columns are called attributes or fields and rows are called records.
 
 For example we can have a table called users with the following columns or attributes: name , email , age
 then the rows would be the actual data that is stored in the table. like ("John","john@gmail.com",24),("Doe","doe@gmail.com",18) and so on
 
-Databases also allow us to perform queries on the data, for example we can ask the database to give us all the users that are older than 18, or all the users that are younger than 18 or any condition you can think of , you can also delete conditions, join tables and so on.
+Databases also allow us to perform queries on the data, for example we can ask the database to give us all the users that are older than 18, or all the users that are younger than 18 or any condition you can think of , you can also delete rows, join tables and so on.
 
-There are a couple of different implementations of relational databases out there, Most of them are free and open source like SQLite,PostGresql,Mysql etc..Databases use SQL ( Structured Query Language ) which is a standardised programming language thats used to interact with the database, raw SQL will not be covered in this course, instead we will focus on Django ORM ( Object Relational Mapping ) which is a library that allows us to interact with databases using python.
+There are a couple of different implementations of relational databases out there, Most of them are free and open source like SQLite,Postgresql,Mysql etc..Databases use SQL ( Structured Query Language ) which is a standardised programming language thats used to interact with the database, raw SQL will not be covered in this course, instead we will focus on Django ORM ( Object Relational Mapping ) which is a library that allows us to interact with databases using python.
 
-Django ORM is also smart enough to work with many types of databases as well, we can use it with [multiple databases](https://docs.djangoproject.com/en/3.2/ref/databases/#third-party-notes)
+Django ORM is also smart enough to work with many types of databases, full list [here](https://docs.djangoproject.com/en/3.2/ref/databases/#third-party-notes)
 
 Throughout this course we will use SQLite, We are using SQLite because it is the simplest database to setup, It comes pre configured with django so there is nothing to setup. SQLLite is only reccomended for testing or development, for actual production applications we will look at Postgresql or Mysql ( These will be covered at the end of the course )

@@ -4,11 +4,11 @@ When you want to store data in a database ( relational database ) the structure 
 
 Django allows us to model schemas by creating classes, in django a model is any class that inherits from the `django.db.models.Model` class, if you create a class from this base class then Django maps it into a database table automatically, it then allows us to perform all kinds of operations by calling methods on this class.
 
-It is important to note that django does not store the data, django just converts what you want to store/query into a query understandable by the database. The actual storing/querying is done by the databse, Django provides this layer of abstraction so that we can create better applications without spending time with the specifics.
+It is important to note that django does not store the data, django just converts what you want to store/query into a SQL query understandable by the database. The actual storing/querying is done by the databse, Django provides this layer of abstraction so that we can create better applications without spending time with the specifics.
 
 Lets start creating our first Django Model!
 
-First lets create a new class called `Task` , this class will represent a task
+First lets create a new class called `Task` , Each object of this class will represent a task
 
 ```python
 from django.db import models

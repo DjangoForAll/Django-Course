@@ -18,7 +18,7 @@ Let the action be the url `/add-task`, to keep things simple lets use the GET me
 
 if we refresh our page you can see that it displays the form, when we try to add a task we can see the django 404 page, this is expected since we did not define the url route `add-task`
 
-lets go ahead and create a new function called `add_task_view` that will handle the data transfer and create the required url, now if we try submitting our form again, it no longer gives an error, now lets write the logic to add the item.
+lets go ahead and create a new function called `add_task_view` that will handle the data, and then create the required url route, now if we try submitting our form again, it no longer gives an error, now lets write the logic to add the item.
 
 lets fetch the data from the request, we have already seen that the `request.GET` is a dictionary that contains all the query parameters, lets fetch the `task` key to get the task name. Now that we have the task in hand, we have to somehow store it. since we are just testing django out, we can just store it in a global variable, lets create a global variable called `tasks` and assign it an empty list.
 
@@ -32,7 +32,7 @@ Finally we can change the tasks view function to render the tasks variable we cr
 
 Now lets add a delete functionality to make our tasks management application more useful.
 
-before getting there, lets first add an index to our html page, since the tasks in the list can be duplicated, the only way we can select a task is by using the index. The index value is available with the `{{forloop.counter}}` we can update our html to display the index value as well.
+before getting there, lets first add an index to our html page, since the tasks in the list can be duplicated, the only way we can select a task is by using the index. The index value is available with the variable `{{forloop.counter}}` we can update our html to display the index value as well.
 
 Now that we have a unique index for each item, lets add a link with each task to delete it. We can use the `<a>` tag to create a link. lets redirect to `delete-task/1` where 1 represents the index of the task to be deleted. now the page renders with links to delete the item as well, but all links delete the item with index 1, we have to change it so that it deletes the item with the corresponding index `delete-task/{{ forloop.counter }}` can be used to dynamically generate a link with the correct index.
 
@@ -40,6 +40,6 @@ Now that we are creating a delete link, lets add a delete functionality to our a
 
 we can create a new view function called `delete_task_view` and pass the index also as an argument, django will automatically pass the extracted index value to this view. Now that we have the index. Lets delete the item and redirect back to the tasks view. You can delete the item using the `del` keyword or the `pop` method in the list class
 
-`tasks.pop(index-1)` is the same as `del tasks[index-1]` we subtract one from the index because the index in the html started at 1 while the indexs in python start at 0
+`tasks.pop(index-1)` is the same as `del tasks[index-1]` we subtract one from the index because the index in the DTL started at 1 while the indexs in python start at 0
 
 And thats it! Now we have a working web application that allows us to manage tasks. We can even deploy the application at this point and have it working. But our data is volatile, anytime the server restarts or crashes we lose all the data. We can leverage databases which are tools which are specifically designed to store data in a reliable way. we'll take a look at what they are and how to leverage them efficiently in the next level.

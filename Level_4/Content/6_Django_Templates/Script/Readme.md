@@ -7,7 +7,7 @@ DTL is not a replacement for HTML, DTL is used for creating Dynamic Content whet
 
 We'll create a new template with DTL and see how exactly it works.
 
-Templates can be placed inside a folder called `templates`, these are usually placed in the root of the project, This is just a good practice and is not required.
+Templates can be placed inside a folder called `templates`, these are usually placed in the root of the project, This is just a good practice and is not mandatory.
 
 Lets create a template folder and a template file called `tasks.html` inside it, we'll also add some static content in it.
 
@@ -25,7 +25,7 @@ Now we have static file rendering, lets make it more dynamic!
 
 we can pass in data into the template by adding context to the render function, the context is a dictionary that can be used to pass in data into the template.
 
-Now to access this value in the tempalte we have to enclose the variable name in double curly braces, for example `{{ tasks }}` , when rendering django will look for the variable `tasks` in the context and replace it with the value. This is how DTL is written in HTML.
+Now to access this value in the template we have to enclose the variable name in double curly braces, for example `{{ tasks }}` , when rendering django will look for the variable `tasks` in the context and replace it with the value. This is how DTL is written in HTML.
 
 you can also do conditions, iterations and methods in DTL, we will look into some more aspects of the render function
 
@@ -39,17 +39,17 @@ You can even try to render a specific value in the template, for example `{{ req
 
 we can also create conditions inside the template, for example
 
-```jinja
+```html
 {% if request.GET.tasks %}
-    <h1>Yay We Have Values</h1>
+<h1>Yay We Have Values</h1>
 {% else %}
-    <h1>No tasks</h1>
+<h1>No tasks</h1>
 {% endif %}
 ```
 
 The if statement here is called a tag in DTL, anything between the `{%` and `%}` is a tag. tags are more complex that simple variables, not all tags require a closing tag
 
-The for tag can be used to iterate over objects, iterate pass a list in the context and try iterating over it.
+The for tag can be used to iterate over objects, let's pass a list in the context and try iterating over it.
 
 ```python
 tasks = ["Complete Django Tutorial" , "Study Django Rest Framework"]

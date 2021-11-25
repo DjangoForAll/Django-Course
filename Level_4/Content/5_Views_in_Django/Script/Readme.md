@@ -14,7 +14,7 @@ This login page is rendered in the admin route, Lets try changing the url route 
 
 \*\* Note that the server automatically restarts, these are features provided by the django development server.
 
-Now lets head on to creating a view. Views are simply functions that return a web response when given a web request, the response can be an html page, a redirection, some staus codes. a json response, an image or anything you can think of!, Normally we keep all views in the views.py file, but for huge projects it usually makes sense to create a folder for views and maintain all views in there.
+Now lets head on to creating a view. Views are simply functions that return a web response when given a web request, the response can be an html page, a redirection, some staus code. a json response, an image or anything you can think of!, Normally we keep all views in the views.py file, but for huge projects it usually makes sense to create a folder for views and maintain all views in there.
 
 we'll create a view right inside the urls file just to show out how it works.
 
