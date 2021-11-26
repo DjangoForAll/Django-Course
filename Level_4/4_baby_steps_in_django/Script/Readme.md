@@ -1,6 +1,6 @@
 Lets get started with installing Django
 
-Django is a python package, so it is installed using pip like regular pacakges.
+Django is a python package, so it is installed using pip like regular packages.
 
 ```bash
 pip install django
@@ -8,7 +8,7 @@ pip install django
 
 This command installs the latest version of Django along with all its dependencies.
 
-Now that we have django installed we need to create a project. To create a new project in django, we use the django-admin command, this command is installed along with the django package.
+Now that we have django installed, we need to create a project. To create a new project in django, we use the django-admin command, this command is installed along with the django packages.
 
 ```bash
 django-admin startproject my_project
