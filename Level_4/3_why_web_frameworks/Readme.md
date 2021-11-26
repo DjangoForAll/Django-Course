@@ -6,7 +6,7 @@ Frameworks are simply a bunch of code that solves a lot of problems you might fa
 
 Frameworks also help keep our application safe, Web attacks change every day and keeping track of them and patching them is a very tedious task, web frameworks like django keep track of each vulnerability and issues a fix as soon as its discovered, which makes the developers life easier.
 
-The tagline of django kindof summarises what it tries to solve : "The web framework for perfectionists with deadlines." !
+The tagline of django kind of summarises what it tries to solve : "The web framework for perfectionists with deadlines." !
 
 Django is not the only web framework out there, there are tons of web frameworks in all sorts of languages, We'll focus on Django since its one of the most popular one and very easy to get started with.
 
