@@ -1,6 +1,6 @@
-Python packages are global by default. That means that if you install a package in your machine, this package is availiable in all projects you have on your machine. Although this sounds really good, it limits projects with conflicting dependencies ( Say you were working on two projects which used different versions of the same package ) To solve this issue we can use virtualenvs (virtual environments).
+Python packages are global by default. That means that if you install a package in your machine, this package is available in all projects you have on your machine. Although this sounds really good, it limits projects with conflicting dependencies ( Say you were working on two projects which used different versions of the same package ) To solve this issue we can use virtualenvs (virtual environments).
 
-Virtualenvs create an isolated environment where you can install packages and experiment freely without affecting the rest of your machine. You can create as many virtualenvs as you want. Another advantage of virtualenvs is that they dont require permissions to install packages, installing global packages usually required you to have root access.
+Virtualenvs create an isolated environment where you can install packages and experiment freely without affecting the rest of your machine. You can create as many virtualenvs as you want. Another advantage of virtualenvs is that they don't require permissions to install packages, installing global packages usually required you to have root access.
 
 > Virtualenv is not the only solution for this problem, there are multiple ways to create virual environments like pipenv, venv ( and a bunch more!) but for the sake of the course we will stick to virtualenv.
 
@@ -42,6 +42,6 @@ You can deactivate the virtual environment by running the following command:
 deactivate
 ```
 
-Try running the `which` commnand again to make sure that the virtual environment is no longer active.
+Try running the `which` command again to make sure that the virtual environment is no longer active.
 
 Make sure that you are always activating the **right** environment before you start working on your project.
