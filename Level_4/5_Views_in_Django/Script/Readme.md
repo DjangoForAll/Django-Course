@@ -10,7 +10,7 @@ in the last level we looked at simple url routes, Django's URL Dispatcher ( This
 
 If you observe the current urls.py file, you can see that there is already a route for the admin panel, Django provides an admin panel by default, we wont be looking into this for now, we'll just verify that the admin panel is working. Lets head over to the admin route.
 
-This login page is rendered in the admin route, Lets try changing the url route and try accessing it from the browser. Lets change admin to manager and save the file, now you can see that the admin route no longer works but if we try manager it will work.
+This login page is rendered in the admin route, Lets try changing the url route and try accessing it from the browser. Lets change admin to manage and save the file, now you can see that the admin route no longer works but if we try manager it will work.
 
 \*\* Note that the server automatically restarts, these are features provided by the django development server.
 
@@ -30,6 +30,6 @@ Lets fix that by returning a response back
 
 Lets import the HTTPResponse class from the `django.http` module. we'll return an empty instance of the HTTPResponse class for now. We can see that our error has disappeared and now we have an empty page. The HTTPResponse class accepts an optional argument called `status`, this is the status code that will be returned to the client. We can quickly try that with 404 and see that it works, Now, Lets add some content to the response.
 
-The response should be the first argument or we can use the keyword argument `content` to set the content of the response. we can write any html code here. lets test it our with a simple html tag. and Voila! we have our first working Django route!
+The response should be the first argument or we can use the keyword argument `content` to set the content of the response. we can write any html code here. Lets test it with a simple html tag. and Voila! we have our first working Django route!
 
 Creating html pages in python is a bit of a challenge, In the next chapter we'll see better ways to solve this
