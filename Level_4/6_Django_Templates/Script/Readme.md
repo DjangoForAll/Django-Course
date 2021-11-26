@@ -1,4 +1,4 @@
-Writing HTML in python is extremely hard, ecspecially when pages get really huge and complex. Django has a convinent solution for this called templates,
+Writing HTML in python is extremely hard, especially when pages get really huge and complex. Django has a convenient solution for this called templates,
 Templates are simply html or text file with some special syntax that describes how dynamic content should be made.
 
 Templates are converted into HTML using template engines, Django comes with its own template system called Django Template Language (DTL).
@@ -13,7 +13,7 @@ Lets create a template folder and a template file called `tasks.html` inside it,
 
 Now we have to let django know where we created the templates folder, we have already discussed that all configurations go inside the `settings.py` file.
 
-this file also has default configurations on how to handle templates, we'll add the path to the template folder to the `TEMPLATE_DIRS` variable.
+This file also has default configurations on how to handle templates, we'll add the path to the template folder to the `TEMPLATE_DIRS` variable.
 
 we wont look into the other configurations until we work with them.
 
@@ -27,13 +27,13 @@ we can pass in data into the template by adding context to the render function, 
 
 Now to access this value in the template we have to enclose the variable name in double curly braces, for example `{{ tasks }}` , when rendering django will look for the variable `tasks` in the context and replace it with the value. This is how DTL is written in HTML.
 
-you can also do conditions, iterations and methods in DTL, we will look into some more aspects of the render function
+You can also do conditions, iterations and methods in DTL, we will look into some more aspects of the render function
 
 Note that the first argument to the render function was the request object, This is used to get request context inside the template, the request context usually contains information like the logged in user name , the current path, parameter values etc.. we will take a quick example to see how this works.
 
 lets try to fetch the value `request` inside the template, note that we dont really pass the value explicitly, it is added by django. we can see that the value is `<WSGIRequest: GET '/'>` this is the request object , lets go one step further and try to get `request.GET` which is a dictionary containing the GET parameters. Note that everything is case sensitive
 
-now we get an empty dictionary rendered, lets try and create some GET parameters, now we can see that the parameters are rendered in the template
+Now we get an empty dictionary rendered, lets try and create some GET parameters, now we can see that the parameters are rendered in the template
 
 You can even try to render a specific value in the template, for example `{{ request.GET.tasks }}` if the parameter does not exist it just does not render anything.
 
@@ -59,6 +59,6 @@ tasks = ["Complete Django Tutorial" , "Study Django Rest Framework"]
 {% endfor %}
 ```
 
-we can also iterate over dictionaries , replace the tasks with request.GET and try it out.
+We can also iterate over dictionaries , replace the tasks with request.GET and try it out.
 
 Play around with templates and experiment what you learned.
