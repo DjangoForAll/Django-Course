@@ -33,7 +33,7 @@ You can see that there are two other models that are registered in the admin int
 
 Since Django already has a User model built in , lets try and add a relation to our user model.
 
-```
+```python
 from django.contrib.auth.models import User
 
 user = models.ForeignKey(User, on_delete=models.CASCADE ,null=True ,blank=True)

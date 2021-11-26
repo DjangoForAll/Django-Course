@@ -53,11 +53,13 @@ And a route to handle this view
 path("user/login", UserLoginView.as_view()),
 ```
 
+Django has a LoginView specifically handling all the Login related logic, we just have to specify the template and setup a route.
+
 We have not set the success_url yet, instead of the success_url we will set the setting `LOGIN_REDIRECT_URL` , this will ensure that no matter how we login we always end up on the same url.
 
 we'll add this config to the bottom of the settings file
 
-```
+```python
 LOGIN_REDIRECT_URL="/tasks"
 LOGIN_URL="/user/login
 ```
