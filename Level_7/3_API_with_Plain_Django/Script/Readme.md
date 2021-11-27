@@ -1,12 +1,12 @@
 Django can be used to create API's on its own, instead of returning HTML documents, we can return XML documents or JSON documents as response, lets try to create an API that returns the the tasks in our task management app
 
-Lets first create the route for our API
+Let's first create the route for our API
 
 ```python
 path('api/tasks' , ViewTasksAPIView.as_view()),
 ```
 
-now that we have our route lets create the class based view
+Now that we have our route lets create the class based view
 
 ```python
 from django.http.response import JsonResponse
@@ -19,7 +19,7 @@ class ViewTasksAPIView(View):
 
 This is how we return JSON objects from our view.
 
-Now we have to convert our task model objects into data types that can be transfered and understood by the client, for eg JSON/XML ( you can think of it as a translation to a different type of data ), this process is called serialization.
+Now we have to convert our task model objects into data types that can be transferred and understood by the client, for eg JSON/XML ( you can think of it as a translation to a different type of data ), this process is called serialization.
 
 Throughout this course serialization will be used to convert Model instances or other objects into native python datatypes (string, boolean , integer...), these datatypes can then be used to create a response.
 
