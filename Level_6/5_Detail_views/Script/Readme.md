@@ -1,6 +1,6 @@
 Now that we have our List, Create and Update Views, we can create our missing View, The Detail view
 
-The detail view is very similary to the list view, but instead of showing all the items, we just show one item in detail.
+The detail view is very similar to the list view, but instead of showing all the items, we just show one item in detail.
 
 Django provides the generic class DetailView for exactly this purpose, Lets first create the new route for the detail view and then the rest
 
@@ -27,7 +27,7 @@ and our template will look like this
 {{object.created_date}}
 ```
 
-the object refers to the selected object and is passed to the template.
+The object refers to the selected object and is passed to the template.
 
 Finally we can add the link to view the details of the object in the list view.
 
