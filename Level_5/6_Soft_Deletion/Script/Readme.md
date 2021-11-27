@@ -1,4 +1,4 @@
-The delete function deletes a row from the database permenently. usually, applications dont necessarily do a full delete, instead they perform soft deletion.
+The delete function deletes a row from the database permanently. usually, applications dont necessarily do a full delete, instead they perform soft deletion.
 
 soft deletion is a way to mark a row as deleted, we'll have a boolean field that is set to true when a row is deleted.
 
@@ -32,7 +32,7 @@ def delete_tasks_view(request,index):
     return HttpResponseRedirect("/tasks")
 ```
 
-instead of the delete method, we are calling the update method on the queryset, the update method will update the value of the given attributes on all the selected rows with the new value, in this case the deleted value to True.
+Instead of the delete method, we are calling the update method on the queryset, the update method will update the value of the given attributes on all the selected rows with the new value, in this case the deleted value to True.
 
 Now we will rewrite our list view to only show the tasks that are not deleted.
 
@@ -45,7 +45,7 @@ def tasks_view(request):
     return render(request,"tasks.html", {"tasks" : all_tasks})
 ```
 
-instead of the `all` method that returns all the rows, we are calling the `filter` method with the condition `deleted=False` that only fetches rows that are not deleted.
+Instead of the `all` method that returns all the rows, we are calling the `filter` method with the condition `deleted=False` that only fetches rows that are not deleted.
 
 > ORM Queries are chained, so if you have two filter methods, both of them are applied to the queryset.
 
