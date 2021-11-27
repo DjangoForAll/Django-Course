@@ -9,7 +9,7 @@ Django has two main commands to manage migrations :
 makemigrations : This is responsible for creating new migrations based on the changes you have made to your models.
 migrate : This is when Django actually performs the schema changes in the Database. This command can also be used to move to a specific migration version.
 
-All migrations in Django exist within the migrations folder inside the app. Its best that we dont modify anything inside the migrations unless we know exactly what we are doing.
+All migrations in Django exist within the migrations folder inside the app. Its best that we don't modify anything inside the migrations unless we know exactly what we are doing.
 
 Now that we have a basic understanding of how migrations work, lets create a new migration.
 
@@ -26,7 +26,7 @@ To explain this in detail, lets take the case we described earlier , we have two
 5. Create Migrations for this change
 6. Migrate the changes
 
-go ahead and try to recreate it and see what happens!
+Go ahead and try to recreate it and see what happens!
 
 The Django Documentation provides excellent information on how to create custom migrations. View them [here](https://docs.djangoproject.com/en/3.2/topics/migrations/#data-migrations)
 
