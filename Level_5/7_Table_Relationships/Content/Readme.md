@@ -1,6 +1,6 @@
-Now that we have an Basic Understanding of realtional databases we can talk about what makes them "Relational".
+Now that we have an Basic Understanding of relational databases we can talk about what makes them "Relational".
 
-The dictionary defenition of a relational database is : a database structured to recognize relations between stored items of information.
+The dictionary definition of a relational database is : a database structured to recognize relations between stored items of information.
 
 Lets first get some context as to why relations are required.
 
