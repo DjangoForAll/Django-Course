@@ -40,6 +40,6 @@ To register the model with the router we created earlier, use the following code
 router.register("task", TaskViewSet)
 ```
 
-and that's it! You have a working REST API, you can Create/Retrieve/Update/Delete tasks via API! try it out in your browser.
+And that's it! You have a working REST API, you can Create/Retrieve/Update/Delete tasks via API! try it out in your browser.
 
 That wasn't too hard right? When code gets this generic there is always a downside to it, we have a working API but absolutely no clue what is happening behind the scenes. Which leads to a very steep learning curve, To master DRF, we need to understand how it works internally.
