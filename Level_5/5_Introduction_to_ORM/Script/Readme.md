@@ -107,7 +107,7 @@ we will change the html to send over the id instead of the loop index
 {% endfor %}
 ```
 
-Now we can uniquely idenity the task to be deleted
+Now we can uniquely identify the task to be deleted
 
 In the delete view we can fetch the row of data with the id and then delete it from the database
 
