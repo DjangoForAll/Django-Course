@@ -25,7 +25,7 @@ To get through the login screen you need to first create an account in your Djan
 python manage.py createsuperuser
 ```
 
-enter all the required information and hit enter, once the user is created, login to the admin panel with the newly created user.
+Enter all the required information and hit enter, once the user is created, login to the admin panel with the newly created user.
 
 Now you can see all the tasks that you have created, you can edit/delete them as well.
 
@@ -39,13 +39,13 @@ from django.contrib.auth.models import User
 user = models.ForeignKey(User, on_delete=models.CASCADE ,null=True ,blank=True)
 ```
 
-the User model ships with django and is used to store the user related data.
+The User model ships with django and is used to store the user related data.
 
-The on_delete argument is used to specify the behaiour of the object when the foreign key (user here) is deleted.
+The on_delete argument is used to specify the behaviour of the object when the foreign key (user here) is deleted.
 
-Lets say that you created some tasks with the user field set to the user you created, after that you deleted the user, now the database does not know what value should be present in the user field, it cant store the id because the id no longer exists, so we can choose whether to cascade the delete ie delete the tasks when the user is deleted, set the value to null, or even `protect` which prevents deletion when there are objects refering to it.
+Lets say that you created some tasks with the user field set to the user you created, after that you deleted the user, now the database does not know what value should be present in the user field, it cant store the id because the id no longer exists, so we can choose whether to cascade the delete ie delete the tasks when the user is deleted, set the value to null, or even `protect` which prevents deletion when there are objects referring to it.
 
-the null and blank values tell the database that this field can have null values, if we dont allow null values then all our existing features will cease to work.
+The null and blank values tell the database that this field can have null values, if we dont allow null values then all our existing features will cease to work.
 
 Lets now create the migrations and run them to add the changes in the database
 
