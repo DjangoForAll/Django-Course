@@ -4,7 +4,7 @@ Apps are usually created by logically grouping actions/data, for example if you 
 
 If you might want to build a new task management app you can reuse the user app which we created for e commerce, this way django prevents you from reinventing the wheel.
 
-There is no defenitive way to decide what constitutes an app, you can even build your entire application inside of a single app, you can also split it into a 100 ones!, generally apps should “Do one thing and do it well.” ( This is also one of the [UNIX Philosophies](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well) ) !
+There is no definitive way to decide what constitutes an app, you can even build your entire application inside of a single app, you can also split it into a 100 ones!, generally apps should “Do one thing and do it well.” ( This is also one of the [UNIX Philosophies](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well) ) !
 
 To create an app you can run the command `python manage.py startapp <app_name>` , the app name should always be in lower cases, I personally tend to name apps in their plural form ( users , posts , blogs etc.. ), there is no standard for this, you can follow what makes the most sense to you.
 
@@ -14,9 +14,9 @@ Lets create a new app called tasks, everything task related is going to come und
 python manage.py startapp tasks
 ```
 
-running this command should create a new folder called tasks in your root project folder
+Running this command should create a new folder called tasks in your root project folder
 
-if you try to view the files inside the `tasks` folder you can see that there are multiple files created for us
+If you try to view the files inside the `tasks` folder you can see that there are multiple files created for us
 
 The app we created is not yet linked to the django project, to link it to the project we need to add the name of our new app to the end of the `INSTALLED_APPS` list in the `settings.py` file.
 
