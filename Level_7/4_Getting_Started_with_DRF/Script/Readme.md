@@ -40,9 +40,9 @@ class ViewTasksAPIView(APIView):
         return Response({"tasks": data})
 ```
 
-Notice that the only changes were the BaseClass and the Response class, the APIView works exactly like a regular View and Response works just like the `JsonResponse` class we observed earlier, These are equivalents from the rest framwork package.
+Notice that the only changes were the BaseClass and the Response class, the APIView works exactly like a regular View and Response works just like the `JsonResponse` class we observed earlier, These are equivalents from the rest framework package.
 
-now if we visit the api url again, the whole UI has changed, now we get a pretty UI that shows us the output and gives us some capability to perform actions.
+Now if we visit the api url again, the whole UI has changed, now we get a pretty UI that shows us the output and gives us some capability to perform actions.
 
 If you observe the code snippet above, you can observe that we haven't really changed any logic, let's use DRF's built in serializer to serialize the data.
 
@@ -68,8 +68,8 @@ The ModelSerializer is a special type of serializer that will automatically map 
 
 Notice that we passed the data into the serializer along with a parameter called `many` , this parameter is used to let the serializer know that we'll be passing more than one Task Object (Queryset) into the serializer
 
-The data attribute of the serializer provides the reprsentation of the input data as native python datatypes, since we had **many** inputs, the output will be a list of dictionaries. if only one object was passed in, then the data attribute would be a python dictionary
+The data attribute of the serializer provides the representation of the input data as native python datatypes, since we had **many** inputs, the output will be a list of dictionaries. if only one object was passed in, then the data attribute would be a python dictionary
 
 The ModelSerializer takes in the fields to serialize along with the model and translates the object into a python dictionary, this can then be sent in the response back to the client.
 
-The ModelSerializer is capable of much more! , lets take a look at other DRF Features to correctly understand serializers and how it works.
+The ModelSerializer is capable of much more! , let's take a look at other DRF Features to correctly understand serializers and how it works.
