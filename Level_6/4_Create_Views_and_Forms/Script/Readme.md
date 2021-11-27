@@ -49,9 +49,9 @@ class CreateTaskView(CreateView):
 
 Here instead of letting django create a form on its own, we first created a Form and then passed it on to the CreateView, This performs the exact same task as the previous snippet, but this time we can write our own logic inside the form class.
 
-Lets say that our tasks must be atleast 10 charecters long! we need to send an error back whenever it is not the case.
+Lets say that our tasks must be atleast 10 characters long! we need to send an error back whenever it is not the case.
 
-to build something like that we can write field validations in the form class.
+To build something like that we can write field validations in the form class.
 
 ```python
 
@@ -69,9 +69,9 @@ class TaskCreateForm(ModelForm):
 
 ```
 
-the form class dynamically searches for methods with the name `clean_<fieldname>` and calls them when the form is validated. The clean methods should return the cleaned value, Lets say that you wanted to keep the title in uppercase, you could do operations like that here.
+The form class dynamically searches for methods with the name `clean_<fieldname>` and calls them when the form is validated. The clean methods should return the cleaned value, Lets say that you wanted to keep the title in uppercase, you could do operations like that here.
 
-Raising Validation Errors wont actually stop execution here, instead Django forms will catch it and display the error in the form.
+Raising Validation Errors won't actually stop execution here, instead Django forms will catch it and display the error in the form.
 
 Similar to the clean methods, the form class also has a couple of methods that are called when the form is submitted, I'll leave documentation regarding all the possible methods in the text.
 
@@ -79,7 +79,7 @@ Placing the right logic in the right method allows you to reuse the same form fo
 
 lets create a new route for the update view `tasks/<pk>/update` and create a new view for it.
 
-the routes for the same will be
+The routes for the same will be
 
 ```python
 path('tasks/<pk>/update' , UpdateTaskView.as_view()),
