@@ -7,17 +7,17 @@ def session_storage_view(request):
     return HTTPResponse(f"Total Views is {total_views}")
 ```
 
-lets create a route to test it out and see how it works
+Lets create a route to test it out and see how it works
 
 This simple view returns the number of times a user has visited the page in a single session, refreshing the page will increment the count.
 
-Things start to get intresting when you try to view this page from an incognito window, You can see that the view count has been reset to 0. This is because incognito windows usually do not keep the session data from the normal window. we can try to view the actual cookie that stores the session id and see what happens if we delete it.
+Things start to get interesting when you try to view this page from an incognito window, You can see that the view count has been reset to 0. This is because incognito windows usually do not keep the session data from the normal window. we can try to view the actual cookie that stores the session id and see what happens if we delete it.
 
-Django recretes a new session for us and all the data in the previous session is lost.
+Django recreates a new session for us and all the data in the previous session is lost.
 
 Django also uses the session to store information about the currently logged in user. Whenever a user logs into a Django server it links the session to the user.
 
-lets use django's built in user management system to build a simple login and signup page.
+Lets use django's built in user management system to build a simple login and signup page.
 
 Lets start with the signup page
 
@@ -74,6 +74,6 @@ from django.contrib.auth.views import LogoutView
 path("user/logout", LogoutView.as_view()),
 ```
 
-since the LogoutView does not need a template, we can use the Class as-is without any changes, The logout redirects you to the default logout page currently, that behaviour can be changed by setting the `LOGOUT_REDIRECT_URL` setting.
+Since the LogoutView does not need a template, we can use the Class as-is without any changes, The logout redirects you to the default logout page currently, that behaviour can be changed by setting the `LOGOUT_REDIRECT_URL` setting.
 
-and now you have a working authentication system with a login page, signup page and logout page.
+And now you have a working authentication system with a login page, signup page and logout page.
