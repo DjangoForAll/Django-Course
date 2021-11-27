@@ -18,7 +18,7 @@ class Task(Serializer):
         return instance
 ```
 
-here we manually defined what the fields and its types , we also manually wrote the create and update methods, Note that the serializer we created just creates the objects, it does not actually save it to the database.
+Here we manually defined what the fields and its types , we also manually wrote the create and update methods, Note that the serializer we created just creates the objects, it does not actually save it to the database.
 
 Model Serializer automatically fetches the model fields and their corresponding types , the create and update methods can easily be generated if we already know the field declarations. ModelSerializer also create the validation logic for us, Serializers like Forms support field level validations as well, lets create the same validation we created for the forms.
 
@@ -26,7 +26,7 @@ Model Serializer automatically fetches the model fields and their corresponding 
 
 ```
 
-to sum up everything, ModelSerializers can convert python native data types into Model Objects and vice versa.
+To sum up everything, ModelSerializers can convert python native data types into Model Objects and vice versa.
 
 The ModelViewset's job is to figure out what serializer should be called when a request is made, how should it be invoked, what authentication methods should be used etc..
 
@@ -52,7 +52,7 @@ The CreateModelMixin defines the .create() method, it is used to create a new ob
 
 You can also see a GenericViewSet at the end of the list, this is the base class that provides all the functionality common between all the mixins like figuring out what function to call based on the request method, route etc
 
-lets take a look at one mixin and study how it works, lets take the CreateModelMixin
+Lets take a look at one mixin and study how it works, lets take the CreateModelMixin
 
 ```python
 class CreateModelMixin:
@@ -69,12 +69,12 @@ class CreateModelMixin:
         serializer.save()
 ```
 
-This is the defenition of the CreateModelMixin, the create() method is used to create objects when you perform a POST request
+This is the definition of the CreateModelMixin, the create() method is used to create objects when you perform a POST request
 
-if you observe, all it does is create a new serializer class , pass in the data and validate the data, once validated it calls the save() method to actually save the data to the database.
+If you observe, all it does is create a new serializer class , pass in the data and validate the data, once validated it calls the save() method to actually save the data to the database.
 
-you must be wondering why there is a `perform_create` method, can't we just call the `save` method directly?
+You must be wondering why there is a `perform_create` method, can't we just call the `save` method directly?
 
-Well this is where things get intresting, These methods can be overridden to add custom logic into it, instead of completely rewriting the entire view to add changes, we can just override the perform_create method to add the logic.
+Well this is where things get interesting, These methods can be overridden to add custom logic into it, instead of completely rewriting the entire view to add changes, we can just override the perform_create method to add the logic.
 
 Take a look at the other mixins and try to guess how they work!
