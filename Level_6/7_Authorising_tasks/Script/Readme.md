@@ -4,7 +4,7 @@ Lets change that to store the user who created the task within the task object a
 
 We already created a model attribute called user, a Foreign key to the User table that Django has. Now we will populate the user when a user saves the task.
 
-Before getting into that lets quickly create a function based view to see how we can access the currently logged in user, we will reuse our sesssion management view for this.
+Before getting into that lets quickly create a function based view to see how we can access the currently logged in user, we will reuse our session management view for this.
 
 ```python
 
@@ -19,7 +19,7 @@ We added a print statement for printing the current user, Django automatically c
 
 When we try to logout and view the same page, Django sets the current user to `AnonymousUser`, we can use the `is_authenticated` attribute to quickly check if the user is logged in or not.
 
-since the user object is accessible from the request object, we can use it in our templates to create a quick greetings line as well, we can add this into our dashboard like so.
+Since the user object is accessible from the request object, we can use it in our templates to create a quick greetings line as well, we can add this into our dashboard like so.
 
 ```
 <h3>Welcome! {{request.user}}</h3>
@@ -75,8 +75,8 @@ class TasksListView(LoginRequiredMixin, ListView):
 ...
 ```
 
-if an unauthenticated user tries to visit the tasks listing page, it will redirect the request to the Login Url, The login url must be defined in the settings.py file with the variable `LOGIN_URL`, otherwise it will redirect to Django's default login page
+If an unauthenticated user tries to visit the tasks listing page, it will redirect the request to the Login Url, The login url must be defined in the settings.py file with the variable `LOGIN_URL`, otherwise it will redirect to Django's default login page
 
-you can add the mixin to all the views you were using to completely secure your application.
+You can add the mixin to all the views you were using to completely secure your application.
 
 Now you have an application that users can login to and save their tasks.
