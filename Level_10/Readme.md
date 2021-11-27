@@ -1,0 +1,5 @@
+- Basics of Deployment
+- Freezing Requirements
+- Static files and managing them
+- Deploying to Heroku
+- Deploying localy
