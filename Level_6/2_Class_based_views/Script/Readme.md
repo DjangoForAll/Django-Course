@@ -12,9 +12,9 @@ class TodoView(View):
         return HttpResponse('Hello World')
 ```
 
-Notice that we are inheriting the base class `View` and then overriding a method called `get`, the get method handles the `GET` request, similary the `post` method handles the `POST` request and so on.
+Notice that we are inheriting the base class `View` and then overriding a method called `get`, the get method handles the `GET` request, similarly the `post` method handles the `POST` request and so on.
 
-Now we have to change our url defenition to point to our class based view, since we used to give views as the arguments in the urls, we have to convert our newly ceated class into a view, Django provides a built in method to convert a class into a view called `as_view`
+Now we have to change our url definition to point to our class based view, since we used to give views as the arguments in the urls, we have to convert our newly created class into a view, Django provides a built in method to convert a class into a view called `as_view`
 
 we can update our url as follows
 
@@ -29,7 +29,7 @@ urlpatterns = [
 ]
 ```
 
-Other than the change in url defenition, everthing else remains the same, you can try and port over our existing logic to the class based view and see how it works.
+Other than the change in url definition, everything else remains the same, you can try and port over our existing logic to the class based view and see how it works.
 
 Function based views are still used if you want to quickly create a view that does not depend on anything else.
 
@@ -97,7 +97,7 @@ Now we need to edit our template to show the pages, Django handles pagination al
 {% endfor %}
 ```
 
-paginator is a vairable that django provides, its a class that handles pagination, Here we are generating Anchor Tags for each page, each page is a redirection to the listing page with the page number, each route also has the serach term in the url, this is required since the page number wont make much sense without it.
+paginator is a variable that django provides, its a class that handles pagination, Here we are generating Anchor Tags for each page, each page is a redirection to the listing page with the page number, each route also has the search term in the url, this is required since the page number wont make much sense without it.
 
 Imagine you search for `milk` in the todo and select the second page, now if the search term is not applied to the second page, the second page would not make much sense right? Propogating the search term will provide the correct results.
 
