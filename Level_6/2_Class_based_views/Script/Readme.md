@@ -79,6 +79,8 @@ class TasksListView(ListView):
         return queryset
 ```
 
+This simple logic checks if there is a search_term in the GET parameters and if it is present filter the results based on it.
+
 Now that we have a listing, what if we wanted pagination for our listing?
 
 pagination is a feature that allows you to show a limited number of objects at a time, this is useful when you have a lot of objects and you want to show them in pages. Retrieving all objects from the database at the same time is usually not a good idea since there will be way too much data.

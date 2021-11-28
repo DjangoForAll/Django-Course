@@ -29,10 +29,12 @@ class CreateTaskView(View):
         return render(request , "task_create.html")
 
     def post(self,request):
-        new_task = request.GET.get("task")
+        new_task = request.POST.get("task")
         Task(title=new_task).save()
         return HttpResponseRedirect("/tasks")
 ```
+
+This is the same logic we had in our function based view except we are fetching the data from the POST parameters instead of the GET parameters.
 
 Now if we head over to the url /create-task, we will see the form rendered, however if we submit the form we'll recieve an error page.
 `CSRF token missing or incorrect.` Django will not accept the form submission, because it is missing the csrf token.
@@ -43,7 +45,7 @@ Lets say that you created a really cool task management web app, lets say you ho
 One of the users in your app was casually looking over the internet ( something completely different ) and stumbles upon a form, Lets say that the form said "Enter your details to win a FREE Prize"! so he fills it out and submits it.
 If the form's action attribute is set to your awesome-task-manager.app then our app will think that some legitimate user is trying to submit the form and accept the form submission.
 
-So the user created a task even he never intended to create a task, now think of a much more serious situation where your banking app is involved and the form tried to create a transaction that transfers money from one account to another! Since the user does not look at each forms action attribute, they will click on a rather random form and submit it! but the consequences can be deadly!
+So the user created a task when he never intended to create a task, now think of a much more serious situation where your banking app is involved and the form tried to create a transaction that transfers money from one account to another! Since the user does not look at each forms action attribute, they will click on a rather random form and submit it! but the consequences can be deadly!
 
 These types of attacks are called Cross-site request forgery (CSRF) attacks. and django has a very clever way to prevent these attacks.
 
@@ -62,6 +64,6 @@ To add a csrf token to the form, you can edit the html as follows,
 </form>
 ```
 
-The `{% csrf_token %}` will render into a hidden input tag, once you are done , view the source of your task creation page and see how it looks like, you will see that an input tag has replace the csrf_token tag.
+The `{% csrf_token %}` will render into a hidden input tag, once you are done , view the source of your task creation page and see how it looks like, you will see that an input tag has been added with the csrf_token tag.
 
 Now the form submission works as expected and the user can create a task.
