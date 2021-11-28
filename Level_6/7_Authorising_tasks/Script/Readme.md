@@ -1,4 +1,4 @@
-Currently all tasks can be viewed by everyone, there is no Authorisation for tasks, if i create a task, it can be viewed by anyone who visit the lists page. which is kinda terrible since it can only be used by one person currently.
+Currently all tasks can be viewed by everyone, there is no Authorisation for tasks, if i create a task, it can be viewed by anyone who visit the lists page. which is kinda terrible since it can only be used by one person.
 
 Lets change that to store the user who created the task within the task object and only list the tasks that were created by the user.
 
@@ -21,11 +21,11 @@ When we try to logout and view the same page, Django sets the current user to `A
 
 Since the user object is accessible from the request object, we can use it in our templates to create a quick greetings line as well, we can add this into our dashboard like so.
 
-```
+```html
 <h3>Welcome! {{request.user}}</h3>
 ```
 
-This will render a welcome message just for the user when he visits a page.
+This will render a welcome message customized for the user when he visits a page.
 
 Now in the create view, we can override the `form_valid` method, the form valid method saves the object when the form is valid
 

@@ -77,15 +77,13 @@ Similar to the clean methods, the form class also has a couple of methods that a
 
 Placing the right logic in the right method allows you to reuse the same form for multiple usecases, lets try and create an update view for our tasks.
 
-lets create a new route for the update view `tasks/<pk>/update` and create a new view for it.
+lets create a new route for the update view `tasks/<pk>/update` and create a new view for it. pk stands for primary key, since our primary key is an integer the `<pk>` can be replaced with any integer.
 
 The routes for the same will be
 
 ```python
 path('tasks/<pk>/update' , UpdateTaskView.as_view()),
 ```
-
-> pk refers to the primary key of the object
 
 The UpdateTaskView Class will have the following defenition
 

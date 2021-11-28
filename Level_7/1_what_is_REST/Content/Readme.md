@@ -12,7 +12,7 @@ REST forms guidelines on how these operations are performed, for example HTTP ha
 
 So instead of having routes like `create-tasks` , `delete-tasks` and so on .. we will have one route for tasks `/task` and then all operations are done with different http methods, this makes the API much easier to understand to us and the folks using our API
 
-REST does not mean just using the http methods as well, it has a bunch of properties and constraints ( 6 to be exact ), we will take a look at some onf them.
+REST does not mean just using the http methods as well, it has a bunch of properties and constraints ( 6 to be exact ), we will take a look at some of them.
 
 - Statelessness
   Imagine you have 10 servers running your application, if a client sends a request it may end up in any one of those servers, if the response does not change no matter what server we connect to, then the application is called stateless, it simply means that no information is retained by the receiver
