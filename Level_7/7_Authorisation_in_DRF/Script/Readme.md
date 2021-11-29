@@ -52,4 +52,4 @@ We passed in read_only so that no one will try to edit the user value.
 
 we can check our API output again and see that the user field is now serialized. if we remove the user attribute here, you can see that it will give the id of the user instead which is not really useful.
 
-you can also have a serializer within the user serializer if needed, the only thing to keep in mind is that in the background all these are creating complex queries to the database, so it is better to keep them as simple as possible.
+you can also have a serializer within the user serializer if needed, the only thing to keep in mind is that in the background all these are creating complex queries to the database, so it is better to keep the serializers as simple as possible.
