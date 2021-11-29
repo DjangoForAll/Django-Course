@@ -80,3 +80,70 @@ If an unauthenticated user tries to visit the tasks listing page, it will redire
 You can add the mixin to all the views you were using to completely secure your application.
 
 Now you have an application that users can login to and save their tasks.
+
+But we are missing something, a loophole that can be exploited, can you guess what that is?
+
+< If needed we can split here to make 2 videos ( If this section gets too long )>
+
+Our DetailView, Deleteview and UpdateView takes an id and retrieve, deletes or updates the object with that id. It currently does not check if you are authorised to perform that action.
+
+This also shows a disadvantage associated with incrementing integer id's , it makes it really easy for someone to try to get to a different object by changing the id to a random number. we'll talk later about this later, for now lets look at the authorisation problem.
+
+We can update our DetailView, DeleteView and UpdateView to dynamically create the required queryset instead of having a fixed one. we already saw how to achieve this in the ListView, lets implement the same logic here.
+
+```python
+class TaskDetailView(LoginRequiredMixin, DetailView):
+    model = Task
+    template_name = "task_detail.html"
+
+    def get_queryset(self):
+        return Task.objects.filter(deleted=False, user=self.request.user)
+
+
+class UpdateTaskView(LoginRequiredMixin, UpdateView):
+    model = Task
+    form_class = TaskCreateForm
+    template_name = "task_create.html"
+    success_url = "/tasks"
+
+    def get_queryset(self):
+        return Task.objects.filter(deleted=False, user=self.request.user)
+
+
+class DeleteTaskView(LoginRequiredMixin, DeleteView):
+    success_url = "/tasks"
+    model = Task
+    template_name = "task_delete.html"
+
+    def get_queryset(self):
+        return Task.objects.filter(deleted=False, user=self.request.user)
+```
+
+Notice somthing strange here? we repeated something over and over again, lets refactor it to be more clean.
+
+```python
+
+class AuthorisationCheck(LoginRequiredMixin):
+    def get_queryset(self):
+        return Task.objects.filter(deleted=False, user=self.request.user)
+
+
+class TaskDetailView(AuthorisationCheck, DetailView):
+    model = Task
+    template_name = "task_detail.html"
+
+
+class UpdateTaskView(AuthorisationCheck, UpdateView):
+    model = Task
+    form_class = TaskCreateForm
+    template_name = "task_create.html"
+    success_url = "/tasks"
+
+class DeleteTaskView(AuthorisationCheck, DeleteView):
+    success_url = "/tasks"
+    model = Task
+    template_name = "task_delete.html"
+
+```
+
+Now the logic needs to be maintained in one method only.
