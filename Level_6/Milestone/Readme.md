@@ -6,7 +6,7 @@ To understand how querysets can be ordered take a look [here](https://docs.djang
 
 The spec for the new pages are given below, ensure that your solution matches the spec. Run the test suite to check if the functionality is working as expected
 
-<To Add Spec and test script>
+<Spec/Test Suite to be added after milestone approval>
 
 > Make sure that you do not change the name of the models and the routes. This is to ensure that the tests are working as expected.
 
