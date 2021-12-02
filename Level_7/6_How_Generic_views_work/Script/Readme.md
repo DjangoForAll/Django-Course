@@ -71,7 +71,7 @@ class CreateModelMixin:
 
 This is the definition of the CreateModelMixin, the create() method is used to create objects when you perform a POST request
 
-If you observe, all it does is create a new serializer class , pass in the data and validate the data, once validated it calls the save() method to actually save the data to the database.
+If you observe, all it does is create a new serializer class , pass in the data and validate the data, once validated it calls the `save` method to actually save the data to the database.
 
 You must be wondering why there is a `perform_create` method, can't we just call the `save` method directly?
 
