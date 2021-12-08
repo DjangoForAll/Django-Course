@@ -17,7 +17,7 @@ admin.sites.site.register(Task)
 
 Thats it! Now you can access your models from the admin interface.
 
-To get to the admin interface you can visit the /admin route, you will be presented with a login screen.
+To get to the admin interface you can visit the /manage route ( we changed this route earlier, we can change this route back to admin for the sake of consistency ), you will be presented with a login screen.
 
 To get through the login screen you need to first create an account in your Django Project. To quickly create a new user lets run the following command.
 

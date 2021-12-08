@@ -3,6 +3,8 @@ Now that we know how to render dynamic content, we can start building forms to c
 Lets create a simple web application that allows users to manage tasks.
 
 To keep things simple lets keep the data in memory ( creating a global variable called tasks ).
+Global variables are usually never used in real life for storing data, we will figure out better ways to store data in the next level, for now lets use it to understand concepts in forms clearly.
+
 we'll go over the implementation in detail
 
 Lets first create a form in html with one input field and one button

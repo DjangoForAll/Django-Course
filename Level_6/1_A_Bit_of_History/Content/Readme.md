@@ -6,8 +6,6 @@ The devs were involved in multiple projects at the same time, which made them mo
 
 Django was built to build applications quickly, one of its core philosophy is "Don't Repeat Yourself" often abbreviated as DRY. read about the others [here](https://docs.djangoproject.com/en/3.2/misc/design-philosophies/)
 
-This marks the midpoint of this course, technically everything taught till now can be used to build production grade applications, You can create the next Facebook or Instagram ( Instagram actually used Django! ) or the next big thing with everything you have learned till now.
+This marks the midpoint of this course, technically everything taught till now can be used to build web applications, but they wont be maintainable and it will be really hard to share reusable components between them.
 
 From this point on we'll learn more on Django's Generic capabilities and how we can utilise them to create applications with ease.
-
-If you are looking for a challenge, visit this level after you complete the course and try to build the final Capstone project with just the concepts you have learnt till now. you can refer back to django's source code and take a look at how Django does it whenever you get stuck.

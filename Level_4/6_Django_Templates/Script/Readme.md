@@ -49,6 +49,8 @@ we can also create conditions inside the template, for example
 
 The if statement here is called a tag in DTL, anything between the `{%` and `%}` is a tag. tags are more complex that simple variables, not all tags require a closing tag
 
+In python we mark the end of a statement block using intendation, but HTML and DTL does not use intendation for any logical statements which is why we use endtags to mark the end of a DTL block. Most programming languages like java or C/C++ use brackets to contain statement blocks.
+
 The for tag can be used to iterate over objects, let's pass a list in the context and try iterating over it.
 
 ```python

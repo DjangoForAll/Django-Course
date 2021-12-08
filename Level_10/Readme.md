@@ -2,4 +2,4 @@
 - Freezing Requirements
 - Static files and managing them
 - Deploying to Heroku
-- Deploying localy
+- Deploying on a dedicated instance
