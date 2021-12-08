@@ -32,4 +32,4 @@ Lets import the HTTPResponse class from the `django.http` module. we'll return a
 
 The response should be the first argument or we can use the keyword argument `content` to set the content of the response. we can write any html code here. Lets test it with a simple html tag. and Voila! we have our first working Django route!
 
-Creating html pages in python is a bit of a challenge, In the next chapter we'll see better ways to solve this
+Creating HTML pages in this way using plain python can be a bit of a challenge, In the next chapter we'll see better ways to solve this
