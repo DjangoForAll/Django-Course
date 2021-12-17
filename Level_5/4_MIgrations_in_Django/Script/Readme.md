@@ -36,7 +36,7 @@ Lets add the following attribute in our model class
 created_date = models.DateTimeField(auto_now=True)
 ```
 
-This attribute will store the date and time when the task was created, auto_now is a built in django attribute that will automatically update the created_date field whenever the task is created.
+This attribute will store the date and time when the task was created, auto_now is an argument that will automatically update the created_date field whenever the task is created.
 
 Now lets run makemigrations again, and see what it does
 
