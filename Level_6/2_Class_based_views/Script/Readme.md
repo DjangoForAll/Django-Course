@@ -33,6 +33,8 @@ Other than the change in url definition, everything else remains the same, you c
 
 Function based views are still used if you want to quickly create a view that does not depend on anything else.
 
+--
+
 Now that we know what class based views are, lets take a look at something called Generic Views, Generic Views as their name suggests are built for a generic purpose, like listing something, viewing some objects details and so on. Generic Views are built to solve CRUD Operations , CRUD stands for Create Retrieve Update Delete. These are the most common operations in almost all applications you might make. Instead of creating these pages in every project, Django provides Generic views that solve the problem for you.
 
 For example, Lets say that you want to list all the tasks in your application, you can create a generic `ListView` and pass in the model or the queryset you want to list. Django will render the template and create a response for you. We'll take a look at the `ListView` Class first.
@@ -43,6 +45,7 @@ from django.views.generic.list import ListView
 class TaskListView(ListView):
     model = Task
     template_name = 'tasks.html'
+    context_object_name = 'tasks'
 ```
 
 By default, django will pass in an object called `object_list` to the template, you can override this variable name by editing the attribute `context_object_name` of our class.
@@ -92,9 +95,7 @@ Now we need to edit our template to show the pages, Django handles pagination al
 ```html
 {% for page in paginator.page_range %}
 <li>
-  <a href="?page={{ page }}&searchterm={{request.GET.searchterm}}"
-    >{{ page }}</a
-  >
+  <a href="?page={{ page }}">{{ page }}</a>
 </li>
 {% endfor %}
 ```

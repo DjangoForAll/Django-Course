@@ -29,6 +29,8 @@ Enter all the required information and hit enter, once the user is created, logi
 
 Now you can see all the tasks that you have created, you can edit/delete them as well.
 
+--
+
 You can see that there are two other models that are registered in the admin interface, these are the User and Group models. Remember back when we were running the migrations we saw a bunch of migrations that we didnt create? Those were Django's migrations to create the User, Group and a bunch of other models.
 
 Since Django already has a User model built in , lets try and add a relation to our user model.

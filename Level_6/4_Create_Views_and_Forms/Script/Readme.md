@@ -5,6 +5,9 @@ Similar to `ListView` which we saw earlier to abstract the listing of objects, C
 Lets create a class based view for the `Task` model.
 
 ```python
+
+from django.views.generic.edit import CreateView
+
 class CreateTaskView(CreateView):
     model = Task
     fields = ("title","description" , "completed")
@@ -36,6 +39,9 @@ Django has a very Useful Form Class, Form Classes are not necessarily connected 
 Lets actually create a form class to see what is happening behind the scenes
 
 ```python
+
+from django.forms import ModelForm
+
 class TaskCreateForm(ModelForm):
     class Meta:
         model = Task

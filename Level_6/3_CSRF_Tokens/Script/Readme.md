@@ -1,6 +1,6 @@
 Before we start with creating the new view , lets first move the task creation view into a separate template, so it's easier to understand, To move to a separate template, lets create a template called task_create.html and create a new view to render the form.
 
-We already learned about get and post methods, usually its convention to use the get method to render the form and the post method to accept the data from the form, that way all the related views fall under the same route, This again is not a requirement, but it makes the view easier to understand.
+We already learned about get and post methods, usually its convention to use the get request to render the form and the post request to accept the data from the form, that way all the related views fall under the same route, This again is not a requirement, but it makes the view easier to understand.
 
 Lets start by creating the new template task_create.html
 
@@ -33,6 +33,8 @@ class CreateTaskView(View):
         Task(title=new_task).save()
         return HttpResponseRedirect("/tasks")
 ```
+
+--
 
 This is the same logic we had in our function based view except we are fetching the data from the POST parameters instead of the GET parameters.
 

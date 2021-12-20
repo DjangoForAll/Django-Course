@@ -11,6 +11,8 @@ path('tasks/<pk>' , TaskDetailView.as_view()),
 Our class defenition will look like this
 
 ```python
+from django.views.generic.detail import DetailView
+
 class TaskDetailView(DetailView):
     model = Task
     template_name = "task_detail.html"

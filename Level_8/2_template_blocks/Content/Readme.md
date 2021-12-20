@@ -12,15 +12,13 @@ let's create a base template called `base.html`
   <head>
     <title>{% block title %}Default Title{% endblock %}</title>
   </head>
-
   <body>
-    <div id="sidebar">
+    <div>
       <ul>
         <li><a href="/">Home</a></li>
       </ul>
     </div>
-
-    <div id="content">{% block content %}{% endblock %}</div>
+    <div>{% block content %}{% endblock %}</div>
   </body>
 </html>
 ```
@@ -28,5 +26,18 @@ let's create a base template called `base.html`
 This template can be used as a base template for other templates that we create, lets create a new template to list tasks from the base template.
 
 ```html
+{% extends 'base.html' %} 
 
+{% block title %}View Tasks{% endblock %} 
+
+{% block content %}
+<h1>All the content should go here!</h1>
+{% endblock %}
 ```
+
+For any child template you must define which parent template you are extending from at the start of the file, we use the extends tag for extending a parent template, you can extend any template in django,
+Once we specify the parent template, we can create blocks we want to override/modify in the child tempalate.
+
+When rendering the page, Django will load up the parent template and replace the blocks with the child template. This means that anything that is not specified inside a block is ignored completely. This makes it really easy to structure web documents, and makes it easier to reuse HTML code.
+
+Templates in Django can do a lot more stuff, take a look [here](https://docs.djangoproject.com/en/4.0/ref/templates/language/) for the complete documentation.
