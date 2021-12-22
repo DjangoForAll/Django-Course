@@ -3,7 +3,7 @@ Lets breakdown the ModelSerializer Class
 DRF comes packages with a Serializer Class, If we were to rewrite our task ModelSerializer with a regular Serializer it would look like this.
 
 ```python
-class Task(Serializer):
+class TaskSerializer(Serializer):
     task = serializers.CharField(max_length=100)
     description = serializers.CharField()
 

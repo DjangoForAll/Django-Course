@@ -2,9 +2,9 @@ Python packages are global by default. That means that if you install a package 
 
 Virtualenvs create an isolated environment where you can install packages and experiment freely without affecting the rest of your machine. You can create as many virtualenvs as you want. Another advantage of virtualenvs is that they don't require permissions to install packages, installing global packages usually required you to have root access.
 
-> Virtualenv is not the only solution for this problem, there are multiple ways to create virual environments like pipenv, venv ( and a bunch more!) but for the sake of the course we will stick to virtualenv.
+> Virtualenv is not the only solution for this problem, there are multiple ways to create virtual environments like pipenv, venv ( and a bunch more!) but for the sake of the course, we will stick to virtualenv.
 
-Now that we know what virutalenvs are, lets create one!
+Now that we know what virutalenvs are, let's create one!
 
 ```bash
 pip install --user virtualenv
@@ -16,9 +16,9 @@ Virtualenv itself is a package that is installed with pip, This command installs
 virtualenv .env
 ```
 
-This command will create a new virtual environment under the .env folder, This is usually where the environment resides , feel free to name it something other than .env
+This command will create a new virtual environment under the .env folder, This is usually where the environment resides, feel free to name it something other than .env
 
-At this point you can take a look at your current directory and you should see a new folder called .env ( or whatever you named it ), this is the folder where your virtual environment will reside.
+At this point, you can take a look at your current directory and you should see a new folder called .env ( or whatever you named it ), this is the folder where your virtual environment will reside.
 
 To activate your virtual environment run the following command:
 
@@ -26,7 +26,7 @@ To activate your virtual environment run the following command:
 source .env/bin/activate
 ```
 
-Once you run the command you'll see the the environment name is displayed in the terminal, this means that the virtual environment is active.
+Once you run the command you'll see the environment name is displayed in the terminal, this means that the virtual environment is active.
 
 To confirm the virtual environment is active you can run the following command:
 

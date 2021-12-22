@@ -71,6 +71,7 @@ We can also add a Logout View as well
 ```python
 from django.contrib.auth.views import LogoutView
 
+
 path("user/logout", LogoutView.as_view()),
 ```
 

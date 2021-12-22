@@ -46,7 +46,7 @@ class TaskSerializer(ModelSerializer):
 
 we created a new serializer that can serialize a user model and then created an attribute in the task serializer called user and assigned it to the user serializer.
 
-Now when the TaskSerilizer tries to serilize the user attribute, it will call the UserSerializer to do so.
+Now when the TaskSerilizer tries to serialize the user attribute, it will call the UserSerializer to do so.
 
 We passed in read_only so that no one will try to edit the user value.
 

@@ -87,7 +87,7 @@ But we are missing something, a loophole that can be exploited, can you guess wh
 
 Our DetailView, Deleteview and UpdateView takes an id and retrieve, deletes or updates the object with that id. It currently does not check if you are authorised to perform that action.
 
-This also shows a disadvantage associated with incrementing integer id's , it makes it really easy for someone to try to get to a different object by changing the id to a random number. we'll talk later about this later, for now lets look at the authorisation problem.
+<!-- This also shows a disadvantage associated with incrementing integer id's , it makes it really easy for someone to try to get to a different object by changing the id to a random number. we'll talk later about this later, for now lets look at the authorisation problem. -->
 
 We can update our DetailView, DeleteView and UpdateView to dynamically create the required queryset instead of having a fixed one. we already saw how to achieve this in the ListView, lets implement the same logic here.
 
