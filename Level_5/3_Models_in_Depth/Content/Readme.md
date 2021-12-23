@@ -1,34 +1,19 @@
-When we created the new app, Django created a bunch of files and a folder for us, Among these files, all Database/Schema related code resides in models.py
+Our current tasks application can add tasks, view them and delete any given task.
 
-When you want to store data in a database ( relational database ) the structure of the data should be predefined, you can think of creating a user table with the attributes name, email, age. we cannot add data with another structure into this table. for eg in the table, we mentioned earlier has no address column, trying to add this data will result in an error. The predefined table structure is often called a schema, it is more or less the blueprint of how the database/table is constructed.
+Your Task is to create another field to store the priority of a task, no two tasks should have the same priority, appropriate form validations should also be present, the listing views must always be sorted by priority.
 
-Django allows us to model schemas by creating classes, in Django, a model is any class that inherits from the `django.db.models.Model` class, if you create a class from this base class then Django maps it into a database table automatically, it then allows us to perform all kinds of operations by calling methods on this class.
+The completed tasks features from the last level's submissions must be re-implemented with Django's generic views.
 
-It is important to note that Django does not store the data, Django just converts what you want to store/query into a SQL query understandable by the database. The actual storing/querying is done by the database, Django provides this layer of abstraction so that we can create better applications without spending time with the specifics.
+To understand how querysets can be ordered take a look [here](https://docs.djangoproject.com/en/3.2/ref/models/querysets/#order-by), you can use the exists method to check if an object already exists in the database, the exists method is documented [here](https://docs.djangoproject.com/en/3.2/ref/models/querysets/#django.db.models.query.QuerySet.exists)
 
-Let's start creating our first Django Model!
+The spec for the new pages are given below, ensure that your solution matches the spec. Run the test suite to check if the functionality is working as expected
 
-First let's create a new class called `Task`, Each object of this class will represent a task
+`GET /completed_tasks` Should render an HTML page with all the completed Tasks  
+`GET /completed_tasks/<task index>` should redirect to a page, with a confirmation to complete a task
+`POST /completed_tasks/<task index>` should mark a task as completed
 
-```python
-from django.db import models
+The Task model should have an attribute named `priority`
 
-class Task(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-    completed = models.BooleanField(default=False)
-```
+> Make sure that you do not change the name of the models and the routes. This is to ensure that the tests are working as expected.
 
-Here we created a class `Task` from the subclass `Model` The `Task` Class represents how the table is going to be structured, each attribute in the model represents a field in the database, Django manages this conversion for us so we don't have to write a single line of SQL.
-
-If you notice every attribute in this class is assigned a field type when the attribute `title` is assigned `models.CharField` we are letting Django know that this field is a `CharField` ie a Character Field that can store any character and the `max_length` ie the maximum length of the data in this field is 100 characters. Django understands that this is a database field and will create the schema accordingly with the given options
-
-> The max_length is a required parameter and is enforced by most databases, if the maximum value of a field is known beforehand the database can optimize the storage size, this was a big deal back in the day when memory was really expensive.
-
-Similar to CharFields we have a bunch of other fields, You can take a look at all the different types of fields and their allowed parameters [here](https://docs.djangoproject.com/en/3.2/ref/models/fields/#field-types)
-
-Similar to the `CharField`, The `TextField` is used to store characters but `TextField` does not impose any restrictions on the size of the data, Boolean Fields store boolean values (True/False), the default parameter can be used in any field to set the default value of the field.
-
-Now that we have a model created, we need to ask Django to sync the schema with the database,
-
-> Note that you can have as many models as you want, You can try creating multiple classes if needed
+Upload your solution to a public Github repository and submit the link to the repository to complete this milestone.
