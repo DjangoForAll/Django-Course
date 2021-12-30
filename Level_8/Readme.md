@@ -1,6 +1,7 @@
 - Django Request response cycle
 - Django Middlewares and what they do
 - Template Blocks in Django
+- Static Files in Django
 - Database Advanced Concepts and ER Diagrams
 - Caching Requests in Django
 - Background Processsing with Celery

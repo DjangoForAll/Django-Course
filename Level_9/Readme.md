@@ -1,4 +1,3 @@
-- Creating Standard projects with CookieCutter
 - What is Unit Tests
 - Unit Testing with Django
 - API Unit Tests with DRF
