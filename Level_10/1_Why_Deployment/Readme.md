@@ -23,4 +23,3 @@ Usually deployment is a pain, it involves a lot of manual provisioning and confi
 **Staging** refers to an environment just before the production environment, this is where you test your application and make sure it works as expected. They usually have a public url but is not made for general public use. This is where your team members test the application to ensure it works as intended. The staging deployment is configured to be exactly the same as Production so that any issues that may happen in Production can be identified before deployment.
 
 There can be more deployments if needed.
-
