@@ -2,4 +2,6 @@ Django has a lot of goodies built for create better and faster tests, Django cre
 
 Django tests are placed in a folder labelled `tests` in the root of your app, each test file in the tests folder must begin with the word `test` , this is how django recognizes that it is a test file.
 
-Lets create the required folder and create a new file 
+Lets start by creating a folder called `tests` in the root folder, and then create a file called `test_task_manager.py` inside the tests folder.
+
+We will write a simple testcase that checks if the tasks listing page returns a status code of `200` and if the page contains 
