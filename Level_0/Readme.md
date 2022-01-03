@@ -1,5 +1,3 @@
-# Week - 0
-
 ## Objective
 
 This is a course built by curious folks for curious folk, Along this course we will try to explain the fundementals of the web and learn Django along the way. This course is designed to be hands on with milestone targets at each level, the targets are designed to make you think and implement the concepts you have learned throughout the course.
