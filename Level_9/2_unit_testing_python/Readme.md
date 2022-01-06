@@ -27,6 +27,8 @@ class TestSquareArea(unittest.TestCase):
         self.assertEqual(calculate_square_area(3),9)
 ```
 
+All test methods should start with test_ , this is how unittest knows that it is a test method.
+
 All tests are a subclass of `unittest.TestCase`, this base class provides a lot of functionality when running tests, it helps keep tracks of tests that failed, printing pretty versions of the output and so much more.
 
 Now that we have the tests written, lets run our test with the following command
