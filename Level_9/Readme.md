@@ -1,3 +1,5 @@
 - What is Unit Tests
 - Unit Testing with Django
 - API Unit Tests with DRF
+- Automated Testing in Github with Actions
+- Closing Notes on Testing and Coverage
