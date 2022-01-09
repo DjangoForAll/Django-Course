@@ -8,6 +8,8 @@ Uploading to github is just a hack, for production deployments you can use somet
 
 Getting static files working in django is a bit tricky and requires some trial and error, Learn more about `whitenoise` and how it can be used to make your life easier [here](https://devcenter.heroku.com/articles/django-assets)
 
+To learn more about static file deployment, read this [article](https://docs.djangoproject.com/en/4.0/howto/static-files/deployment/)
+
 ### Dynamic Files
 These are files that are created on the go or uploaded by a user, examples are user profile pictures/images, user reports etc. Since these are not static files they cannot be predetermined when the application is launched, handling Dynamic files is therefore a tad bit complicated than static files.
 
