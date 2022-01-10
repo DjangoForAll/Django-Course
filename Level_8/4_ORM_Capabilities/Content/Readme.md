@@ -1,14 +1,14 @@
-Lets take a better look at the ORM using the django shell, Django shell is simply the python interactive interpreter with django configured, since django is configured, you can interact with the Django ORM without any additional setup.
+Let's take a better look at the ORM using the Django shell, Django shell is simply the python interactive interpreter with Django configured, since Django is configured, you can interact with the Django ORM without any additional setup.
 
-To run the django shell run the following command in the root of the project:
+To run the Django shell run the following command in the root of the project:
 
 ```bash
 python manage.py shell
 ```
 
-Once this command executes, it should open up a python intreactive shell, you can now start interacting with the ORM.
+Once this command executes, it should open up a python interactive shell, you can now start interacting with the ORM.
 
-lets start with importing the Model Class we created earlier.
+let's start with importing the Model Class we created earlier.
 
 ```python
 from tasks.models import Task
@@ -22,13 +22,13 @@ Once the Task model class is imported, we can start to run operations on it.
 Task.objects.all()
 ```
 
-Running the above code snippet, fetches all the the tasks in the database as a queryset.
+Running the above code snippet fetches all the tasks in the database as a queryset.
 
 ```python
 print(Task.objects.all())
 
 # We can also fetch all the values or specific values from the database using the values method.
-Task.objects.values() # Returns a list of dictionaries with al the values as keys, Note that this fetches all the attributes of a task
+Task.objects.values() # Returns a list of dictionaries with all the values as keys, Note that this fetches all the attributes of a task
 Task.objects.values('title') # We can ask the ORM to fetch only the fields that we require only
 Task.objects.values('title','completed') # We can also pass in a list of fields to fetch
 ```
@@ -45,7 +45,7 @@ for task in tasks: # This is where the actual database operations are performed,
 
 ### Counting Rows
 
-We can get the count of rows in the database with the count method on a queryest, Note that getting the count does not fetch all the data, the database only returns the data we ask for, in this case the count of tasks in the database.
+We can get the count of rows in the database with the count method on a queryset, Note that getting the count does not fetch all the data, the database only returns the data we ask for, in this case, the count of tasks in the database.
 
 ```python
 tasks_count = Task.objects.all().count() # Fetches the Count of tasks in the database
@@ -61,11 +61,11 @@ tasks = Tasks.objects.filter(deleted=False) # Gets all the tasks that are not de
 tasks = tasks.filter(completed=True) # Gets all the tasks that are completed
 ```
 
-If you notice the above example, we are filtering based on two field seperately, this is called filter chaining, the resulting queryset will have all the tasks that are not deleted and are completed.
+If you notice the above example, we are filtering based on two fields separately, this is called filter chaining, the resulting queryset will have all the tasks that are not deleted and are completed.
 
 ### Ordering Data
 
-We can also let the database to return ordered data, we can use the `order_by` method on a queryset to order the data.
+We can also let the database return ordered data, we can use the `order_by` method on a queryset to order the data.
 
 ```python
 tasks = Task.objects.all()
@@ -78,7 +78,7 @@ tasks.order_by('completed','-created_at') # Orders the tasks by completed ascend
 
 ### Slicing Querysets
 
-Like slicing lists, we can also slice the queryset, Slicing data without a ordering method is not reccomended as we may get different results each time. Negative indexing is not supporseted in the ORM, for more reading look [here](https://docs.djangoproject.com/en/4.0/topics/db/queries/#limiting-querysets)
+Like slicing lists, we can also slice the queryset, Slicing data without an ordering method is not recommended as we may get different results each time. Negative indexing is not supported in the ORM, for more reading look [here](https://docs.djangoproject.com/en/4.0/topics/db/queries/#limiting-querysets)
 
 ```python
 tasks = Task.objects.all()
@@ -100,7 +100,7 @@ tasks.first()
 
 ### Playing with objects
 
-Each object of the queryset is an object of the model class that we have created, This object can be manipulated if needed. Logic related to the object should be written inside the models for correctly abstracting logic. We'll see an example here
+Each object of the queryset is an object of the model class that we have created, This object can be manipulated if needed. 
 
 ```python
 
@@ -109,11 +109,11 @@ task_obj = tasks[0] # Get one of the task as a task object
 task_obj = tasks.first() # Another way to get a task object from a queryset, This particular method get the first row from the database
 
 task_obj.completed = True # Set the completed field to True
-task_obj.save() # Update all the changes that we have made into the database. In our case it updates the completed field to True
+task_obj.save() # Update all the changes that we have made into the database. In our case, it updates the completed field to True
 # Django is not intelligent enough to understand that we have only changed the completed value, So instead it updates all the values with what it knows last, This is one of the reasons why the update method that we looked at earlier is better.
 task_obj.user # This will return the user object that is associated with the task object, This object can again be manipulated and saved.
 ```
 
 ### Summary
 
-Django has a very powerful ORM, almost everything you will ever need to do with data can be performed through the ORM, Learning the ORM and what it can do is a great way to learn the framework. I reccomend everyone to go through the [official documentation](https://docs.djangoproject.com/en/4.0/ref/models/querysets/) to get a clear and consice idea on what the ORM is what its capabilites are.
+Django has a very powerful ORM, almost everything you will ever need to do with data can be performed through the ORM, Learning the ORM and what it can do is a great way to learn the framework. I recommend everyone to go through the [official documentation](https://docs.djangoproject.com/en/4.0/ref/models/querysets/) to get a clear and concise idea of what the ORM is what its capabilities are.
