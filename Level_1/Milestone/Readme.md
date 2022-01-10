@@ -1,23 +1,17 @@
-## Milestones
+To complete this milestone you must create a fork of the repository provided and create a new folder with your GitHub username and a Readme file in the following format:
 
-To complete this milestone you must create a fork of the repository provided and create a new folder with your GitHub username and add the solution to fizzbuzz in any programming language.
+The file should be called `Readme.md`, if your GitHub username is `johndoe` then you need to create a folder called `johndoe` in the root directory and create a file called `Readme.md` in that folder.
 
-Fizzbuzz is a very simple program that prints numbers one by one till a given limit, But for multiples of three print “Fizz” instead of the number, and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
+> `.md` files are called markdown files and they are used to format text in a way that is easier to read and write. 
 
-so if the limit is 5 the output will be the following
+In the Readme file, introduce yourself, your hobbies, interests, the best projects you have worked on, and so on...
 
-```
-1
-2
-Fizz
-4
-Buzz
-```
+Feel free to include whatever you want in the Readme file, refrain from uploading images or any other files to keep it _classy_!
 
-Fizzbzz can be solved in a lot of different ways, you can choose to do it the naive way, the extremely [over engineered way](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition/tree/uinverse), or maybe something in between, figure out the most creative way you can solve this problem and a short comment on why you love your solution.
+You can create a PR into this repo: https://github.com/coronasafe/volunteers
 
-You can create a PR into this repo: https://github.com/coronasafe/fizzbuzz
+> You can check out other users for inspiration ( Example: https://github.com/coronasafe/volunteers/tree/master/vigneshhari)
 
-> You can check out other solutions for inspiration
+_for a quick intro to markdown, visit this [article](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)_
 
 once you have created the pull request mark this activity as completed.
