@@ -18,3 +18,10 @@ A basic knowledge of any programming language is required, Prefrably Python. Bas
 This course assumes that you already have a development environment with a stable internet connection, Linux/Mac is preffered , Windows is not Preferred ( except Windows on WSL )
 There is another course `Web Development 101` which can be taken prior to this course.  
 Above all you need to have a strong will to learn new skills.
+
+
+## Summary
+
+In the Django course, we'll start off with introduction to git, github and basic operations with git, Then move on to python and its core features and basics of object oriented programming, we'll also refresh our skills on html and test out the built in python http server, Once we are familiar with python, we'll start learning django and creating a basic web application with django, We'll also learn about the Django ORM and performing operations with it, We'll also be taking a deep dive on Django's generic views and Django Rest Framework as well, We'll also learn about some behind the scenes features of Django and how to efficiently handle databases, Background Processing etc. Finally we'll cover testing, Continuous Integration with github actions and basics of deployment and deploying our application with a Platform as a service solution like heroku.
+
+At the end of the course you would be given a capstone project where you will apply all the skills you have learned thorughout the course to build a fully functional web application.
