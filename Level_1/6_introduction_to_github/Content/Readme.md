@@ -62,7 +62,7 @@ Forking is a feature in git that allows you to create a copy of your repository 
 
 Forking is usually used to propose changes to the original repository and then merge those changes into the original repository.
 
-In Github, with every repo you have the option to fork it from the UI. Once the fork is created you can make changes to it.
+In Github, with every repo, you have the option to fork it from the UI. Once the fork is created you can make changes to it.
 
 ### Pull Requests
 
@@ -72,9 +72,13 @@ Once a pull request is made, you can discuss and review the potential problems a
 
 _To complete this lesson, we'd like you to practice using git by working through the ._ [Git-it Guide](http://jlord.us/git-it/)
 
+### Ignoring Files
+When developing a project, you may not want to git track some specific files, this could be anything from your editor's settings to a secret file you maintain.
+
+Git includes a feature that allows you to do just this, create a file called `.gitignore` in the root of your repository, any files or patterns that you specify in this file will not be tracked by git (unless forced). This is a great way to keep your repository clean and free of any sensitive information. Here is a [template](https://github.com/github/gitignore/blob/main/Python.gitignore) that you can use, add the git ignore file as soon as you create your repo.
 ### Tips/Tricks for Git
 
 It is incredibly easy to mess up a git repository and the best way to learn how not to do it is to keep experimenting. Trying out various techniques and finding the sweet spot.  
-Whatever happens, do **not** try copy-pasting git code unless you know exactly what its doing **( There is only pain down that path ! )**  
+Whatever happens, do **not** try copy-pasting git code unless you know exactly what it's doing **( There is only pain down that path ! )**  
 Commit messages and Branch Names should always make sense. Otherwise, years later you'll blame yourself **( That's what I did )**  
 There is a sea of open source software out there, try to find something interesting and contribute. That's the recommended way to become a better developer!

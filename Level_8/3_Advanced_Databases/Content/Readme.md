@@ -8,7 +8,7 @@ Once you have a general idea, we start designing a database to store our data, E
 
 An ER Diagram simply represents different tables and how they connect to each other, it also lists out the attributes and datatypes of each table. We can take a look at our task management application's ER Diagram to quickly understand the database design.
 
--- ER
+-- ER Diagram User Task.png
 
 As you can see, we only have 2 tables, one table to store our tasks and another table to store our users. A task can have only one user association, this is also known as a many to one relationship. Similarly, a user can have many tasks, this is also known as a one-to-many relationship.
 
@@ -18,7 +18,7 @@ The last type of relationship is a many-to-many relationship, lets say that you 
 
 Many to Many relationships cannot be created without creating a thorough table, Imagine the example we talked about earlier, Connecting multiple tasks to multiple tags, We can't have a field in the task table, since for each value of the tag we will have to duplicate the task data, Same goes with the tag table as well. This is where a through table comes in, It is a table that simply connects two tables together. Let's see an example of such a table.
 
--- ER
+-- ER Diagram User Task Tag.png
 
 As you can see, for every tag associated with a task, there needs to be another entry in the through table, no data is duplicated anywhere.
 
@@ -26,4 +26,4 @@ Now that we have a general idea of relationships, we can move over to the implem
 
 [This Django doc](https://docs.djangoproject.com/en/4.0/topics/db/models/#relationships) explains each of the relationships in detail
 
-For examples on each relationship type, visit this [url](https://docs.djangoproject.com/en/4.0/topics/db/examples/)
+For examples on each relationship type, read this [article](https://docs.djangoproject.com/en/4.0/topics/db/examples/)

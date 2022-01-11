@@ -1,11 +1,39 @@
-Our current tasks application can add tasks, view them and delete any given task.
+In This milestone, you will be extending the functionality of the project we worked in the level.
 
-To complete this level's milestone, you have to create a new page to view completed tasks and provide an option to complete a given task.
+The specification for this program is as follows,
 
-The spec for the new pages are given below, ensure that your solution matches the spec. Run the test suite to check if the functionality is working as expected
+## Specification
 
-<Spec/Test Suite to be added after milestone approval>
+You are asked to build the same project we worked on in the level and add two new features to it.
 
-> Make sure that you do not change the name of the models and the routes. This is to ensure that the tests are working as expected.
+1) A new route to mark tasks as completed. ` GET /complete_task/<Task Index> `
+2) A new route to view completed tasks. ` GET /completed_tasks `
 
-Upload your solution to a public github repository and submit the link to the repository to complete this milestone.
+Completed tasks should no longer be visible in the existing tasks view.
+
+For the other functionality, the URL routes should be exactly the same as the ones used in the level.
+
+For bounty points, implement another route `GET /all_tasks` that renders pending and completed tasks on a single page.
+
+This milesone should be implemented with the Django ORM. the model is already present in the boilerplate code, no changes should be made to the model.
+## Boilerplate code
+
+Use the following repository as a starting point for this project: https://github.com/vigneshhari/GDC-Level-5-Milestone
+
+to install the requirements for this project, run the following command in your terminal:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Testing
+
+Run the following command to test your application.
+
+```bash
+python manage.py test
+```
+
+## Submission
+
+Once all the tests are passing, push the code to a GitHub repository and submit the link to the repo.
