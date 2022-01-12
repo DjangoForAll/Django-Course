@@ -2,7 +2,8 @@ Standards in testing are always opinionated. Most probably every article you rea
 
 I'll leave some articles for you to read and you can pick the best way to write tests on your own, Just make sure that you are writing tests no matter what style you follow!
 
-
+[Django Tests Style Guide by J.V. Zammit](https://www.untangled.dev/2021/08/22/django-testing-style-guide/)  
+[Mozilla Foundation](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)  
 
 ## Coverage
 
