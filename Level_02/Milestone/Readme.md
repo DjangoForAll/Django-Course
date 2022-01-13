@@ -115,4 +115,4 @@ The test.py file will run your program and compare the output with the expected 
 
 You can find the incomplete code and the instructions to complete it in the following GitHub repository. ( Fork this repo to get started )
 
-https://github.com/vigneshhari/GDC-Level-2-Milestone
+https://github.com/DjangoForAll/GDC-Level-2-Milestone

@@ -6,11 +6,11 @@ The file should be called `Readme.md`, if your GitHub username is `johndoe` then
 
 In the Readme file, introduce yourself, your hobbies, interests, the best projects you have worked on, and so on...
 
-Feel free to include whatever you want in the Readme file, refrain from uploading images or any other files to keep it _classy_!
+Feel free to include whatever you want in the Readme file, _keep it classy_!
 
-You can create a PR into this repo: https://github.com/coronasafe/volunteers
+You can create a PR into this repo: https://github.com/DjangoForAll/students
 
-> You can check out other users for inspiration ( Example: https://github.com/coronasafe/volunteers/tree/master/vigneshhari)
+> You can check out other users for inspiration ( Example: https://github.com/DjangoForAll/students/tree/master/vigneshhari)
 
 _for a quick intro to markdown, visit this [article](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)_
 

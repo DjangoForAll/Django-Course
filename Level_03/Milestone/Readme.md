@@ -45,4 +45,4 @@ You will be given an incomplete Python class. Your task will be to modify the cl
 
 You can find the incomplete code and the instructions to complete it in the following GitHub repository. ( Fork this repo to get started )
 
-https://github.com/vigneshhari/GDC-Level-3-Milestone
+https://github.com/DjangoForAll/GDC-Level-3-Milestone
