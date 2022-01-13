@@ -1,6 +1,6 @@
 ## What is Object-Oriented programming?
 
-In python everything is an object, You can think of an object as something that holds a collection of data and methods that act on those data.
+In Python, everything is an object. You can think of an object as something that holds a collection of data and methods that act on those data.
 The objects are created from classes.
 
 You can think of classes as blueprints for creating objects and objects as something that was created with those blueprints. you can create as many objects as you want from a class.
@@ -27,7 +27,7 @@ Now we have a class but it doesn't really do anything, to add some functionality
 
 constructors are used to initialize an object, In the earlier example we created a person object and assigned it to a variable called john, but the value of the attribute name was not changed, it was just a default value. Constructors can receive arguments and change attributes of the object during initialization.
 
-In python, constructor methods are called magic methods or dunder methods. They are prefixed and suffixed with two underscores ( since devs could not pronounce the double underscores each time they started to call it dunder methods or double underscore methods ), The constructor is called a magic method because we don't call it manually, it is called automatically when an object is created. The constructor in python is called \_\_init\_\_.
+In Python, constructor methods are called magic methods or dunder methods. They are prefixed and suffixed with two underscores ( since devs could not pronounce the double underscores each time they started to call it dunder methods or double underscore methods ), The constructor is called a magic method because we don't call it manually, it is called automatically when an object is created. The constructor in Python is called \_\_init\_\_.
 
 ```python
 class Person:
@@ -56,11 +56,11 @@ class Person: # Create a new Class Person
 
 john = Person("John Doe")
 print(john.greet()) # Prints Hello John Doe
-jane0 = Person("Jane Doe")
-print(john.greet()) # Prints Jane Doe
+jane = Person("Jane Doe")
+print(jane.greet()) # Prints Jane Doe
 ```
 
-To Quickly find out the class of an object we can use the built-in type function
+To quickly find out the class of an object we can use the built-in type function
 
 ```python
 print(type(1)) # Prints <class 'int'>
