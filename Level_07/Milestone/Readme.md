@@ -28,4 +28,4 @@ pip install -r requirements.txt
 
 ## Submission
 
-Once all the tests are passing, push the code to a GitHub repository and submit the link to the repo.
+Once all the required features are implemented, push the code to a GitHub repository and submit the link to the repo.
