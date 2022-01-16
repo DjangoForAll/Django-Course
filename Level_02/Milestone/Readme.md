@@ -1,12 +1,12 @@
-In This milestone, you will be implementing a basic command-line program that lets you manage your tasks.
+In This milestone you will be implementing a basic command line program that lets you manage your tasks.
 
-The specification for this program is as follows,
+The specification for this pogram is as follows,
 
 ## Specification
 
-You are asked to build a command-line program that lets you manage your tasks. Each task is associated with a priority, the priority is a number that denotes how important a task is, note that the value of the priority is inversed ( lower the value highest the priority).
+You are asked to build a command line program that lets you manage your tasks. Each task is associated with a priority, the priority is a number that denotes how important a task is, note that the value of the priority is inversed ( lower the value highest the priority).
 
-1. The incomplete version of the program can be found in the file `solve_me.py`
+1. The incomplete version of the program can found in the file `solve_me.py`
 
 2. Priority can be any integer _greater than_ or _equal to_ 1. 1 being the highest priority
 
@@ -16,15 +16,15 @@ You are asked to build a command-line program that lets you manage your tasks. E
 
 ### 1. Help
 
-Executing the command without any arguments, or with a single argument help print the CLI usage.
+Executing the command without any arguments, or with a single argument help prints the CLI usage.
 
 ```
 $ python tasks.py help
 Usage :-
 $ python tasks.py add 2 hello world    # Add a new item with priority 2 and text "hello world" to the list
 $ python tasks.py ls                   # Show incomplete priority list items sorted by priority in ascending order
-$ python tasks.py del INDEX            # Delete the incomplete item with the given index
-$ python tasks.py done INDEX           # Mark the incomplete item with the given index as complete
+$ python tasks.py del PRIORITY_NUMBER  # Delete the incomplete item with the given priority
+$ python tasks.py done PRIORITY_NUMBER # Mark the incomplete item with the given priority as complete
 $ python tasks.py help                 # Show usage
 $ python tasks.py report               # Statistics
 ```
@@ -60,23 +60,23 @@ Added task: "the thing i need to do" with priority 5
 
 ### 4. Delete an item
 
-Use the del command to remove an item by its index.
+Use the del command to remove an item by its priority.
 
 ```
-$ ./tasks del 3
-Deleted item with index 3
+$ ./tasks delete 3
+Deleted item with priority 3
 ```
 
 Attempting to delete a non-existent item should display an error message.
 
 ```
-$ ./tasks del 5
-Error: item with index 5 does not exist. Nothing deleted.
+$ ./tasks delete 5
+Error: item with priority 5 does not exist. Nothing deleted.
 ```
 
 ### 5. Mark a task as completed
 
-Use the done command to mark an item as completed by its index.
+Use the done command to mark an item as completed by its priority.
 
 ```
 $ ./tasks done 1
@@ -87,7 +87,7 @@ Attempting to mark a non-existed item as completed will display an error message
 
 ```
 $ ./tasks done 5
-Error: no incomplete item with index 5 exists.
+Error: no incomplete item with priority 5 exists.
 ```
 
 ### 6. Generate a report
