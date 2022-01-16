@@ -17,9 +17,11 @@ For bounty points, implement another route `GET /all_tasks` that renders pending
 
 You are only supposed to use in-memory variables to store data in the submission.
 
+> Note: Please make sure your URL patterns have a trailing slash to pass the tests.
+
 ## Boilerplate code
 
-Use the following repository as a starting point for this project: https://github.com/DjangoForAll/GDC-Level-4-Milestone
+Use the following repository as a starting point for this project: https://github.com/vigneshhari/GDC-Level-4-Milestone
 
 to install the requirements for this project, run the following command in your terminal:
 
