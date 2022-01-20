@@ -2,9 +2,12 @@
 ### Static Files
 These are files that are not generated, changed, or processed by the server ( These include CSS, images, js, etc that you use in your HTML files ), The server just serves them if needed. Django is terrible at static files management because it was never intended for it, There are packages like `whitenoise` that make it slightly better, but it is still a bad idea to let Django manage static files.
 
+
+> Django is completely capable of serving static content, but it is not very efficient or very fast compared to tools that were built to solve this exact problem. To quote the Django docs, "This method is grossly inefficient and probably insecure, so it is unsuitable for production."
+
 Usually, you will offload all the static files to external file storage to let them manage static content delivery themselves. One of the easiest hacks you can test yourself is to use Github's built-in hosting feature, GitHub hosts the content with their built-in feature called pages for free. This is a great way to offload static files to Github. The `STATIC_URL` setting in your settings file can be used to let Django know that it is no longer handling static management, set the value of the variable to `"http://static.example.com/"` and now Django will prepend the URL to all static files, so the files are no longer served from Django.
 
-Uploading to GitHub is just a hack, for production deployments you can use something like DigitalOcean Spaces or AWS S3 to offload the static files to a remote location. You can also use a proxy in your deployment to offload the static files to another server. we won't be getting into these methods in detail, but you can find a lot of information about them on the internet.
+Uploading to GitHub is just a hack, for production deployments you can use something like Digitalocean Spaces or AWS S3 to offload the static files to a remote location. You can also use a proxy in your deployment to offload the static files to another server. we won't be getting into these methods in detail, but you can find a lot of information about them on the internet.
 
 Getting static files working in Django is a bit tricky and requires some trial and error, Learn more about `whitenoise` and how it can be used to make your life easier [here](https://devcenter.heroku.com/articles/django-assets)
 

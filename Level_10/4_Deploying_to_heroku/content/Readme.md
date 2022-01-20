@@ -22,7 +22,13 @@ heroku create <application-name> # Replace <application-name> with the name of y
 
 This command will create a new Heroku application with the name you specified, and add a new remote to your local git repository, this remote will be called `heroku` and will point to a git instance on Heroku. Once you are done with your work, you can push your changes to the remote `heroku`. This will let Heroku know that you are trying to deploy your application and it will do that.
 
-We can run `git push origin heroku` and Heroku will take our current application and deploy it. But it does not really work yet, We currently run our application with the `manage.py` file, which is used for creating local development servers and not production-grade servers. We will be using an HTTP server called gunicorn to run our application. Django has already created a `wsgi.py` file that will interact with the gunicorn HTTP server. WSGI stands for web server gateway interface, it contains an application callable which the application server (Gunicorn) will use to communicate to your code.
+We can run `git push origin heroku` and Heroku will take our current application and deploy it. But it does not really work yet, We currently run our application with the `manage.py` file, which is used for creating local development servers and not production-grade servers. The web server shipped with django has not gone through any security audits or performance tests which makes it a poor choice as a production web server. Quoting the official Django documentation: _We’re in the business of making web frameworks, not web servers, so improving this server to be able to handle a production environment is outside the scope of Django_
+
+We will be using an HTTP server called `gunicorn` to run our application in Heroku. Django has already created a `wsgi.py` file that will interact with the gunicorn HTTP server. WSGI stands for web server gateway interface, it contains an application callable which the application server (Gunicorn) will use to communicate to your code.
+
+Lets just breakdown what we talked about before moving ahead, Python has set a standard called [PEP-3333](https://www.python.org/dev/peps/pep-3333/) that specifies a standard interface between web servers and python web application or frameworks to ensure that servers and applications communicate in a standard manner. The standard requires an application callable (a callable is anything that can be called). The application should be callable with a standard set of arguments passed by the webserver and the application should return a response.  ( checkout the wsgi file inside your project and you should be able to get to the application that it creates. )
+
+Visit this [article](https://www.fullstackpython.com/green-unicorn-gunicorn.html) for more details regarding gunicorn and django
 
 To install gunicorn, we can run the following command in our terminal
 

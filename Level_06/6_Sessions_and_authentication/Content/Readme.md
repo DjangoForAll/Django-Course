@@ -17,7 +17,7 @@ Let's take a quick example to see how we can set and get values from the session
 -- Video
 
 Further Reading:  
-[Django Sessions](https://docs.djangoproject.com/en/4.0/topics/http/sessions/)
-[User Attribute in Request](https://docs.djangoproject.com/en/4.0/topics/http/sessions/)
-[Using the Django Authentication System](https://docs.djangoproject.com/en/4.0/topics/auth/default/#using-the-django-authentication-system)
-> Read about the Authenticate method [here](https://docs.djangoproject.com/en/4.0/topics/auth/default/#using-the-django-authentication-system), The authenticate method actually logs in a user, this is how the login view works internally.
+- [Django Sessions](https://docs.djangoproject.com/en/4.0/topics/http/sessions/)
+- [User Attribute in Request](https://docs.djangoproject.com/en/4.0/topics/http/sessions/)
+- [Using the Django Authentication System](https://docs.djangoproject.com/en/4.0/topics/auth/default/#using-the-django-authentication-system)
+> Read about the authenticate method [here](https://docs.djangoproject.com/en/4.0/topics/auth/default/#using-the-django-authentication-system), The authenticate method actually logs in a user, this is how the login view works internally.

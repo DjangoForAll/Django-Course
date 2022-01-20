@@ -28,7 +28,7 @@ The process of converting one data type to another is called type conversion. ty
 ```python
 num_a = 100 # int
 num_b = 1.9 # float
-print(numb_a + num_b) # implicit type conversion to float
+print(num_a + num_b) # implicit type conversion to float
 ```
 
 To view the type of a variable you can use the `type()` function.
