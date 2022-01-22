@@ -46,11 +46,15 @@ Let's create a new file called `Procfile` ( No Extensions ) and add the followin
 web: gunicorn task_manager.wsgi
 ```
 
-before deployment, run the following command to let Django know that static files need not be collected
+To handle static files, django comes built in with a [collectstatic](https://docs.djangoproject.com/en/4.0/ref/contrib/staticfiles/#collectstatic) command, this command will collect all the static files that are required for the application to run and place them in a predefined folder.
 
-```bash
-heroku config:set DISABLE_COLLECTSTATIC=1
+The collectstatic command requires a folder to be defined so that the static files can be placed in, lets add this configuration in the settings file
+
+```python
+STATIC_ROOT = BASE_DIR / "staticfiles"
 ```
+
+This places all static files in the `staticfiles` folder in the root, you can try running the command locally to test it out, just ensure that the collected files are not commited to git!
 
 Now that all our application config has been completed, let's push the changes to the Heroku remote.
 
@@ -76,6 +80,8 @@ Commit your changes and push to Heroku again to ensure that everything is workin
 
 Even though our application is working, there are some issues with our application: 
 
-1) We have not set up a dedicated database yet, The database we currently use (SQLLite) is not used in production applications, SQLLite is a file-based database, you must have seen a file called `db.sqlite3` in the root of your project, this is the database we were using till now, Continuing with databases like this is a terrible idea, we will be using a different type of databases like `MySQL` or `PostgreSQL` in production.
-2) Static files are not being served by our application yet, we either need to configure a different server for serving static files or we need to let our application server know that it needs to serve static files.
+1) We have not set up a dedicated database yet, The database we currently use (SQLite) is not used in production applications, SQLite is a file-based database, you must have seen a file called `db.sqlite3` in the root of your project, this is the database we were using till now, Since SQLite is a file based database, if the file is deleted, all our data is lost, it also makes it really hard to share the data with other instances running on other machines.
+Heroku uses an [ephemeral filesystem](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem) that means that the changes made to the filesystem when an instance is running only last until that instance is running, if the instance is shutdown or restarted the filesystem is also reset, this means that all our data is also lost in the process. Heroku calls its instances [dynos](https://devcenter.heroku.com/articles/dynos) and they are restarted once every day and whenever you deploy/make changes to the env.
+We will need a dedicated database to store our data, we will be using a datbase called `Postgres` in the next lesson. 
+2) Since django disables static file serving in production, we either need to configure a different server for serving static files or we need to install packages like whitenoise that lets us handle static files in production.
 
