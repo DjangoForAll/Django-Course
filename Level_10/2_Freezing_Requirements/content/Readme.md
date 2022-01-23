@@ -20,17 +20,17 @@ It is also common to have a `requirements-dev.txt` as well, this file would cont
 
 Some examples of packages that are used in dev only are the following: 
 - [Django Debug ToolBar](https://django-debug-toolbar.readthedocs.io/en/latest/installation.html)
-    This is a package that adds an overlay to the server rendered page which makes development and debugging easier
+    This is a package that adds an overlay to the server-rendered page which makes development and debugging easier
 - [Black](https://djangopackages.org/packages/p/black/)
     Auto Formatting in Django
 - [Django Silk](https://github.com/jazzband/django-silk)
     Silk is a live profiling and inspection tool for the Django framework
 
-These packages are usually used only in the dev environment, keeping these packages in production might not make much sense, this is why its usually good to have a seperate requirements that contains just the dev requirements.
+These packages are usually used only in the dev environment, keeping these packages in production might not make much sense, this is why it's usually good to have separate requirements that contain just the dev requirements.
 
 When running the application in different environments, It also makes sense to create multiple settings.py files so that we can have different configurations for different environments.
 
-You can inherit reqruiements from other requirements files if needed
+You can inherit requirements from other requirements files if needed
 
 ```requirements
 # requirements-dev.txt

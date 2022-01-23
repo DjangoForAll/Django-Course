@@ -22,13 +22,13 @@ heroku create <application-name> # Replace <application-name> with the name of y
 
 This command will create a new Heroku application with the name you specified, and add a new remote to your local git repository, this remote will be called `heroku` and will point to a git instance on Heroku. Once you are done with your work, you can push your changes to the remote `heroku`. This will let Heroku know that you are trying to deploy your application and it will do that.
 
-We can run `git push origin heroku` and Heroku will take our current application and deploy it. But it does not really work yet, We currently run our application with the `manage.py` file, which is used for creating local development servers and not production-grade servers. The web server shipped with django has not gone through any security audits or performance tests which makes it a poor choice as a production web server. Quoting the official Django documentation: _We’re in the business of making web frameworks, not web servers, so improving this server to be able to handle a production environment is outside the scope of Django_
+We can run `git push origin heroku` and Heroku will take our current application and deploy it. But it does not really work yet, We currently run our application with the `manage.py` file, which is used for creating local development servers and not production-grade servers. The web server shipped with Django has not gone through any security audits or performance tests which makes it a poor choice as a production web server. Quoting the official Django documentation: _We’re in the business of making web frameworks, not web servers, so improving this server to be able to handle a production environment is outside the scope of Django_
 
 We will be using an HTTP server called `gunicorn` to run our application in Heroku. Django has already created a `wsgi.py` file that will interact with the gunicorn HTTP server. WSGI stands for web server gateway interface, it contains an application callable which the application server (Gunicorn) will use to communicate to your code.
 
-Lets just breakdown what we talked about before moving ahead, Python has set a standard called [PEP-3333](https://www.python.org/dev/peps/pep-3333/) that specifies a standard interface between web servers and python web application or frameworks to ensure that servers and applications communicate in a standard manner. The standard requires an application callable (a callable is anything that can be called). The application should be callable with a standard set of arguments passed by the webserver and the application should return a response.  ( checkout the wsgi file inside your project and you should be able to get to the application that it creates. )
+Let's just break down what we talked about before moving ahead, Python has set a standard called [PEP-3333](https://www.python.org/dev/peps/pep-3333/) that specifies a standard interface between web servers and Python web applications or frameworks to ensure that servers and applications communicate in a standard manner. The standard requires an application callable (a callable is anything that can be called). The application should be callable with a standard set of arguments passed by the web server and the application should return a response.  ( checkout the WSGI file inside your project and you should be able to get to the application that it creates. )
 
-Visit this [article](https://www.fullstackpython.com/green-unicorn-gunicorn.html) for more details regarding gunicorn and django
+Visit this [article](https://www.fullstackpython.com/green-unicorn-gunicorn.html) for more details regarding gunicorn and Django
 
 To install gunicorn, we can run the following command in our terminal
 
@@ -46,15 +46,15 @@ Let's create a new file called `Procfile` ( No Extensions ) and add the followin
 web: gunicorn task_manager.wsgi
 ```
 
-To handle static files, django comes built in with a [collectstatic](https://docs.djangoproject.com/en/4.0/ref/contrib/staticfiles/#collectstatic) command, this command will collect all the static files that are required for the application to run and place them in a predefined folder.
+To handle static files, Django comes built-in with a [collectstatic](https://docs.djangoproject.com/en/4.0/ref/contrib/staticfiles/#collectstatic) command, this command will collect all the static files that are required for the application to run and place them in a predefined folder.
 
-The collectstatic command requires a folder to be defined so that the static files can be placed in, lets add this configuration in the settings file
+The collect static command requires a folder to be defined so that the static files can be placed in, lets add this configuration in the settings file
 
 ```python
 STATIC_ROOT = BASE_DIR / "staticfiles"
 ```
 
-This places all static files in the `staticfiles` folder in the root, you can try running the command locally to test it out, just ensure that the collected files are not commited to git!
+This places all static files in the `staticfiles` folder in the root, you can try running the command locally to test it out, just ensure that the collected files are not committed to git!
 
 Now that all our application config has been completed, let's push the changes to the Heroku remote.
 
@@ -80,8 +80,8 @@ Commit your changes and push to Heroku again to ensure that everything is workin
 
 Even though our application is working, there are some issues with our application: 
 
-1) We have not set up a dedicated database yet, The database we currently use (SQLite) is not used in production applications, SQLite is a file-based database, you must have seen a file called `db.sqlite3` in the root of your project, this is the database we were using till now, Since SQLite is a file based database, if the file is deleted, all our data is lost, it also makes it really hard to share the data with other instances running on other machines.
-Heroku uses an [ephemeral filesystem](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem) that means that the changes made to the filesystem when an instance is running only last until that instance is running, if the instance is shutdown or restarted the filesystem is also reset, this means that all our data is also lost in the process. Heroku calls its instances [dynos](https://devcenter.heroku.com/articles/dynos) and they are restarted once every day and whenever you deploy/make changes to the env.
-We will need a dedicated database to store our data, we will be using a datbase called `Postgres` in the next lesson. 
-2) Since django disables static file serving in production, we either need to configure a different server for serving static files or we need to install packages like whitenoise that lets us handle static files in production.
+1) We have not set up a dedicated database yet, The database we currently use (SQLite) is not used in production applications, SQLite is a file-based database, you must have seen a file called `db.sqlite3` in the root of your project, this is the database we were using till now, Since SQLite is a file-based database, if the file is deleted, all our data is lost, it also makes it really hard to share the data with other instances running on other machines.
+Heroku uses an [ephemeral filesystem](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem) that means that the changes made to the filesystem only last until that instance is running, if the instance is shut down or restarted the filesystem is also reset, this means that all our data is also lost in the process. Heroku calls its instances [dynos](https://devcenter.heroku.com/articles/dynos) and they are restarted once every day and whenever you deploy/make changes to the env.
+We will need a dedicated database to store our data, we will be using a database called `Postgres` and we'll see how to use it in the next lesson. 
+2) Since Django disables static file serving in production, we either need to configure a different server for serving static files or we need to install packages like `whitenoise` that lets us handle static files in production. We'll see how we can implement it in the next lesson.
 

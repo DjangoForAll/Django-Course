@@ -1,6 +1,8 @@
-We have already seen the flow of a request that hits a django server, lets take an example and create a new middleware in django.
+We have already seen the flow of a request that hits a django server, 
 
-Lets create a middleware that will add the current time to the request and response.
+Now we'll take a look at the current middlewares that are present in our project, The middleware is executed in order and changing its order might mess things up.
+
+Lets create a custom middleware.
 
 ```python
 class CustomMiddleware(object):

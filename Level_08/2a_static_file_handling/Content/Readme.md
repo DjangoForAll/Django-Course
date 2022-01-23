@@ -6,7 +6,7 @@ Django provides a very simple way to handle static files.
 
 2) Now, add an image to our static folder, this could be any image, let's call it `test_image.png`
 
-3) let's create a new template called `test_static.html` , and then create a route called `/test_static/` that renders this template.
+3) let's create a new template called `test_static.html`, and then create a route called `/test_static/` that renders this template.
 
 4) To reference the static file inside a Django template, we need to let Django know that we are serving a static file and let it handle the route to the static file.
 

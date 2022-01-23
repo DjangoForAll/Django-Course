@@ -3,9 +3,12 @@ It keeps our application in a stable state and ensures that we don't break any o
 
 Unit testing can also save time by cutting down on manual testing and quickly finding bugs.
 
-> Jacob Kaplan-Moss, one of Django’s original developers, says __“Code without tests is broken by design.”__
+>__“Code without tests is broken by design.”__ - Jacob Kaplan-Moss, one of Django’s original developers
 
-Now we have an understanding of why testing is required, But how do we get about doing it? 
+To understand the need for unit testing clearly, let's take an example. 
+Lets take the case of our task manager app we have built earlier, the app works fine for now, sometime later we decided to rewrite the tasks listing view to show the tasks in a different way( maybe added some optimisations as well ), but while implementing the feature, the user level filter was not added, that meant that anyone could view anyones tasks, if we are manually testing with a single user, everything would have been working as intended and would be okay to be deployed. This is one of the cases where unit tests step in to help, the unit tests would have been written to test access of the lists and those tests would have failed. This helps us quickly pinpoint the error and understand what all have been affected by the change that we made without manually testing everything everytime.
+
+Now we have a basic understanding of why testing is required, But how do we get about doing it?
 
 There are some strategies that we can learn to implement tests in our project, One of them is test-driven development, In this strategy, we first create tests that abstract the feature we are trying to implement, and then create the code that fixes the test. This might seem counterintuitive at first, but it tries to model a real-world scenario where we would have a high-level view of a problem and then a developer can implement logic to actually make it work.
 
