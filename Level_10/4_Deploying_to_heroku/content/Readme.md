@@ -66,7 +66,7 @@ This might take some time, once Heroku is done deploying, it should provide a li
 
 If you try to view your page now, you'll get an error that says `DisallowedHost at /`, there are two issues here,
 
-1) Django has a built-in locking mechanism that blocks the request unless they are from a list of allowed hosts, this setting can be found under the `settings.py` file in the `ALLOWED_HOSTS` variable. ( Host is the fully qualified domain name of the website. )
+1) Django has a built-in mechanism that blocks the request unless they are from a list of allowed hosts, this setting can be found under the `settings.py` file in the `ALLOWED_HOSTS` variable. ( Host is the fully qualified domain name of the website. )
 2) Django is explicitly pointing out the error along with stack traces to our code, these pretty error pages are rendered by Django because we have set the `DEBUG` variable in the settings file to `True`. This lets Django know that we are in the development environment and that we don't care about security. The debug mode should NEVER be turned on in production.
 
 Let's fix the first issue by finding the `ALLOWED_HOSTS` variable in the settings file and updating it like this
@@ -82,6 +82,7 @@ Even though our application is working, there are some issues with our applicati
 
 1) We have not set up a dedicated database yet, The database we currently use (SQLite) is not used in production applications, SQLite is a file-based database, you must have seen a file called `db.sqlite3` in the root of your project, this is the database we were using till now, Since SQLite is a file-based database, if the file is deleted, all our data is lost, it also makes it really hard to share the data with other instances running on other machines.
 Heroku uses an [ephemeral filesystem](https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem) that means that the changes made to the filesystem only last until that instance is running, if the instance is shut down or restarted the filesystem is also reset, this means that all our data is also lost in the process. Heroku calls its instances [dynos](https://devcenter.heroku.com/articles/dynos) and they are restarted once every day and whenever you deploy/make changes to the env.
-We will need a dedicated database to store our data, we will be using a database called `Postgres` and we'll see how to use it in the next lesson. 
-2) Since Django disables static file serving in production, we either need to configure a different server for serving static files or we need to install packages like `whitenoise` that lets us handle static files in production. We'll see how we can implement it in the next lesson.
+We will need a dedicated database to store our data, we will be using a database called `Postgres` in our Heroku instance.
+2) Since Django disables static file serving in production, we either need to configure a different server for serving static files or we need to install packages like `whitenoise` that lets us handle static files in production.
 
+We'll see how we can solve these issues in the next lesson.
