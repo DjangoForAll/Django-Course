@@ -10,7 +10,7 @@ I strongly recommend everyone to go through (even skim through) the [PEP8 Docume
 
 A couple of python packages also help in automatic formatting of python code, Thanks to python's extensive use of indentation, python code by default is at least partially formatted, packages like [black](https://github.com/psf/black) and [autopep8](https://pypi.org/project/autopep8/) help in formatting python code. Set these up with your favorite code editor to ensure that your code always stays formatted in the right way.
 
-Follow this [article](https://dev.to/adamlombard/how-to-use-the-black-python-code-formatter-in-vscode-3lo0#:~:text=Black%20is%20%22the%20uncompromising%20Python,save%20a%20file%20in%20VSCode.&text=Open%20your%20VSCode%20settings%2C%20by,%3E%20Preferences%20%2D%3E%20Settings'.&text=Black%20will%20now%20format%20your%20code%20whenever%20you%20save%20a%20*.) to set a formatted with vscode, The preffered code editor for this course.
+Follow this [article](https://dev.to/adamlombard/how-to-use-the-black-python-code-formatter-in-vscode-3lo0#:~:text=Black%20is%20%22the%20uncompromising%20Python,save%20a%20file%20in%20VSCode.&text=Open%20your%20VSCode%20settings%2C%20by,%3E%20Preferences%20%2D%3E%20Settings'.&text=Black%20will%20now%20format%20your%20code%20whenever%20you%20save%20a%20*.) to set a formatter with vscode, The preffered code editor for this course.
 
 ### PEP 20 the Zen of Python
 
