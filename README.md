@@ -5,5 +5,3 @@ This course was developed for GDC - Global Digital Corps , The course is designe
 The course is completely free to use and distribute. For any suggestions/modifications/questions , feel free to create issues/PR's .
 
 All the best! :)
-
-The course is still a work in progress!
