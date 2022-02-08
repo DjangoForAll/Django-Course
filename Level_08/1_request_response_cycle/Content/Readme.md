@@ -1,4 +1,4 @@
-A web application usually revolves around requests and responses, the application logic somehow converts the request into an appropriate response, There are a lot of stages before the request is reached to the view that we create, these steps are usually called middleware. we won't be discussing in detail about middlewares, we'll just touch base on why they are important in Django.
+A web application usually revolves around requests and responses, the application logic somehow converts the request into an appropriate response, There are a lot of stages before the request is reached to the view that we create, these steps are usually called middlewares. we won't be discussing in detail about middlewares, we'll just touch base on why they are important in Django.
 
 Roughly speaking a django request goes through the following flow,
 Request -> Request Middleware -> URL Router -> Views -> Response Middleware -> Response

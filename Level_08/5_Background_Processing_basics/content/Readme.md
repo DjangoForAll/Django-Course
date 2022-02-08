@@ -1,6 +1,6 @@
 Everything that we discussed till now worked in the context of an HTTP request, usually we'll also have jobs that are not invoked by an external HTTP request, we will be looking into some use cases and how its implemented.
 
-Let's say that you want to send an email with all the pending tasks to the user at midnight every day. This is a job that is dependent on the current time and not based on an external request. These types of jobs are usually called cronjobs. There can also be an externally triggered job, for example, let's say you have an endpoint that does a lot of computation and needs a lot of time to process. These types of long-running jobs are usually performed in the background so that the actual server has more time to work on simpler requests.
+Let's say that you want to send an email with all the pending tasks to the user at midnight every day. This is a job that is dependent on the current time and not based on an external request. These types of jobs are usually called scheduled tasks or scheduled jobs. There can also be externally triggered jobs as well, for example, let's say you have an endpoint that does a lot of computation and needs a lot of time to process. These types of long-running jobs are usually performed in the background so that the actual server has more time to work on simpler requests.
 
 Celery is a popular library that solves exactly this problem. Note that celery is not dependent on Django, there are packages that integrate Django and celery for specific use cases.
 

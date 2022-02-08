@@ -33,7 +33,7 @@ Task.objects.values('title') # We can ask the ORM to fetch only the fields that 
 Task.objects.values('title','completed') # We can also pass in a list of fields to fetch
 ```
 
-Querysets are lazy in nature, as in they do not call the database unless you do something to evaluate the queryest.
+Querysets are lazy in nature, as in they do not call the database unless you do something to evaluate the queryset.
 
 ```python
 
@@ -110,7 +110,10 @@ task_obj = tasks.first() # Another way to get a task object from a queryset, Thi
 
 task_obj.completed = True # Set the completed field to True
 task_obj.save() # Update all the changes that we have made into the database. In our case, it updates the completed field to True
-# Django is not intelligent enough to understand that we have only changed the completed value, So instead it updates all the values with what it knows last, This is one of the reasons why the update method that we looked at earlier is better.
+# Django is not intelligent enough to understand that we have only changed the completed value, So instead it updates all the values with what it knows last, ie it updates all the values in the current task_obj to the database
+
+task_obj.save(update_fields=["completed"]) # We can also explicitly ask Django to update only the fields we provide in this list, that way it does not have to update all the attributes to the database.
+
 task_obj.user # This will return the user object that is associated with the task object, This object can again be manipulated and saved.
 ```
 

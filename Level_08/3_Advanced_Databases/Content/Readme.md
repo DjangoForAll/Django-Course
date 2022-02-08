@@ -1,6 +1,6 @@
 We learned the general principles of databases earlier, now we'll talk a little bit more on how to efficiently design and use databases.
 
-Databases are usually designed before you start programming, Schema changes after designing an application can be tedious to handle and even more painful if the application is in use.
+Databases are usually designed before you start programming, even though frameworks like Django make it is extremely simple to create and maintain changes in the database schema, it is recommended to spend some time designing the database schema before you actually start working on the project.
 
 Before you start developing a web application, you need to have a general idea of what you are trying to solve and what kind of data you will be handling.
 
