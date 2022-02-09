@@ -5,6 +5,7 @@ Before we jump onto the user stories in this system, here are the main entities 
 - Facility: It can be a PHC or CHC.
 - Patient: In our system, a patient is an object whose data we are dealing with, and they never get to use the software. A patient is registered in a PHC and is only referred to a CHC.
 
+
 ## User Stories
 
 ### District Admin
@@ -34,6 +35,7 @@ Here is how they will interact with the system:
   Filtering and sorting the patients should be doable.
 - CRUD operations on patient object:  
   A nurse can register a patient with their personal details to the facility the former belongs to and update the below categories during the first visit. Provision for sending an email with the treatment summary report consisting of all the data collected about the patient should be done. Patient records should have a soft-delete option.
+
   A patient object has 4 major categories:
 
   - Personal Details
@@ -45,6 +47,7 @@ Here is how they will interact with the system:
   During the first visit to a patient, the patient object is updated and details for all the above categories are filed. On consecutive visits, a treatment report form is filled which alters the data in the last 2 categories stated above. The treatment report form should have the provision to refer the patient to any secondary nurse in the district especially based on their skillset (treatments they specialise in).
 
   Brownie Points: Filter the secondary nurses in the ward to which the PHC of the primary nurse belongs to.
+
 
 - Schedule a visit:  
   A nurse has to deal with a lot in a day. To make their lives easier, we want to enable them with a feature that allows them to prioritise their visits to critical patients on a daily basis.

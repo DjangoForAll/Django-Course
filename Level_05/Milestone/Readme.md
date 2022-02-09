@@ -26,6 +26,11 @@ to install the requirements for this project, run the following command in your 
 pip install -r requirements.txt
 ```
 
+Also, migrate the database changes so you can use the model:
+```bash
+python manage.py migrate
+```
+
 ## Testing
 
 Run the following command to test your application.
