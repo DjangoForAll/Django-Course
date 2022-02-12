@@ -81,6 +81,8 @@ This model can have:
 - `name`: name of the disease
 - `icds_code`: International Classification of Diseases code
 
+For sample data, please refer to [this](https://github.com/coronasafe/arike/blob/main/db/seeds/development/diseases.seeds.rb)
+
 #### patient disease
 This model should connect a patient with disease(s) and each should contain a `note` field which can describe the condition further.
 #### visit schedule
@@ -103,5 +105,22 @@ and it should be related to a patient and a user (nurse)
 - `note`: special notes for the visit
 
 It should be related to a `visit schedule`
+
+#### treatment
+- `description`: description of the treatment,
+- `care_type`: type of care,
+- `care_sub_type`: sub-type of the care,
+
+for care types and sub types, refer to [this](https://github.com/coronasafe/arike/blob/main/db/seeds/development/treatment.seeds.rb)
+
+It should be related to a `patient`
+
+#### treatment_notes
+- `note` - notes for the treatment
+- `description`: description of the treatment,
+- `care_type`: type of care,
+- `care_sub_type`: sub-type of the care,
+
+it should be related to every `visit`
 
 > Note: each model should maintain a `created_at` and `updated_at` properties. There should only be soft deletion! No record should be permanently deleted.
