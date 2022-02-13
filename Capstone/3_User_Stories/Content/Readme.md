@@ -69,3 +69,11 @@ The only difference is that they deal with patients being referred to them. They
   Nurses will be sent an email every day at a configurable time with the daily report of their work, number of patients handled, treatments they did etc. for bookkeeping.
 - Patient Report  
   After a patient's data is updated, their treatment summary should be sent to their relative ( can be stored on the patient model ).
+
+### Dependent Filters
+
+In the application the attribute `ward` is used in multiple occasions, there might be thousands of ward in the system and finding the right one can be a time consuming task, loading all the wards at the same time can be computationally expensive as well, to mitigate such issues we can use dependent filters which first ask for a state, which then shows the districts filtered by the state, then the LSG's filtered by the district and then the ward filtered by the LSG. This makes the process of selecting a ward extremely simple and intuitive for the user, in the backend we avoid fetching all the wards as well.
+
+This approach is hard to implement with server side rendering alone since the HTML content changes based on the user's selection, This feature can be implemented with basic API's and javascript, This feature is not a requirement for this capstone but I highly reccomend building this feature to understand basic javascript and an API flow.
+
+Read the following [document](https://simpleisbetterthancomplex.com/tutorial/2018/01/29/how-to-implement-dependent-or-chained-dropdown-list-with-django.html) for more info on buildin the javascript part
