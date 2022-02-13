@@ -9,7 +9,7 @@ This model can have a `name` and will be related to a `state`.
 This model should contain:
 
 - `name`,
-- `kind`: an LSG can be of different type like Gram Panchayat, Municipality etc.,
+- `kind`: an LSG can be of different types like Gram Panchayat, Municipality, etc.,
 - `lsg_body_code`: unique code of the lsg body. refer to the [care repo](https://github.com/coronasafe/care/blob/master/care/users/models.py#L61)
 
 and will be related to a `district`.
@@ -20,7 +20,7 @@ This model should contain:
 - `name`,
 - `number`: number associated with the ward,
 
-and should be related to an `lsg_body`
+and should be related to a `lsg_body`
 #### facility
 This model should contain
 
@@ -35,7 +35,7 @@ and should be related to a `ward`.
 #### user
 This model can be used as a base for multiple types of users: `primary_nurse`, `secondary_nurse`, `district_admin`.
 
-This can contain the basic informations that would be common to all the users:
+This can contain the basic information that would be common to all the users:
 
 - `full name`,
 - `role`: The role of the user,
@@ -66,7 +66,7 @@ This model should contain the family member’s details of a patient. This shoul
 - `phone`,
 - `date_of_birth`,
 - `email`,
-- `relation`: how is this memeber related to the patient (dropdown),
+- `relation`: how is this member related to the patient (dropdown),
 - `address`,
 - `education`,
 - `occupation`,
@@ -84,7 +84,7 @@ This model can have:
 For sample data, please refer to [this](https://github.com/coronasafe/arike/blob/main/db/seeds/development/diseases.seeds.rb)
 
 #### patient disease
-This model should connect a patient with disease(s) and each should contain a `note` field which can describe the condition further.
+This model should connect a patient with disease(s) and each should contain a `note` field that can describe the condition further.
 #### visit schedule
 - `date` and `time` of the schedule
 - `duration`
@@ -101,7 +101,7 @@ and it should be related to a patient and a user (nurse)
 - `systemic_examination`
 - `patient_at_peace`: is the patient at peace?
 - `pain`: does the patient feel pain?
-- `symptoms`: could be multiple (multi select)
+- `symptoms`: could be multiple (multi-select)
 - `note`: special notes for the visit
 
 It should be related to a `visit schedule`
@@ -111,7 +111,7 @@ It should be related to a `visit schedule`
 - `care_type`: type of care,
 - `care_sub_type`: sub-type of the care,
 
-for care types and sub types, refer to [this](https://github.com/coronasafe/arike/blob/main/db/seeds/development/treatment.seeds.rb)
+for care types and subtypes, refer to [this](https://github.com/coronasafe/arike/blob/main/db/seeds/development/treatment.seeds.rb)
 
 It should be related to a `patient`
 
