@@ -5,7 +5,6 @@ Before we jump onto the user stories in this system, here are the main entities 
 - Facility: It can be a PHC or CHC.
 - Patient: In our system, a patient is an object whose data we are dealing with, and they never get to use the software. A patient is registered in a PHC and is only referred to a CHC.
 
-
 ## User Stories
 
 ### District Admin
@@ -44,10 +43,9 @@ Here is how they will interact with the system:
   - Treatment history
 
 - Visit the patient:  
-  During the first visit to a patient, the patient object is updated and details for all the above categories are filed. On consecutive visits, a treatment report form is filled which alters the data in the last 2 categories stated above. The treatment report form should have the provision to refer the patient to any secondary nurse in the district especially based on their skillset (treatments they specialise in).
+  During a visit, a primary nurse will be adding health information, will be viewing the active treatments and adding notes for each active treatment in that particular visit. The nurse will also be able to refer the patient to any secondary nurse in the district especially based on their skillset (treatments they specialise in) from the patient dashboard. They can always view the patient dashboard and make edits to the first 2 categories above.
 
   Brownie Points: Filter the secondary nurses in the ward to which the PHC of the primary nurse belongs to.
-
 
 - Schedule a visit:  
   A nurse has to deal with a lot in a day. To make their lives easier, we want to enable them with a feature that allows them to prioritise their visits to critical patients on a daily basis.
@@ -58,7 +56,7 @@ Here is how they will interact with the system:
 This user persona belongs only to a CHC and is the specialist nurse that provides special care for a patient only when referred by a primary nurse.
 They have equal access to all data and interact with the system exactly like a primary nurse.
 
-The only difference is that they deal with patients being referred to them and the treatment report form will have a different set of questions. They can see all data including all the patient objects under their CHC.
+The only difference is that they deal with patients being referred to them. They can see all data including all the patient objects under their CHC.
 
 ### Common Features
 
