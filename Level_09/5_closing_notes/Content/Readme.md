@@ -31,4 +31,6 @@ coverage report
 
 You can now see the coverage of each file in your project. Since we mostly use generic methods, we don't really have any "custom code" in them, which makes the coverage pretty high. This is one of the cases where the coverage is not the best indicator of test quality. High coverage need not mean that the code is perfect. It just means that the code is covered by the tests. It does not necessarily ensure that all the edge cases and logical operations are working as expected.
 
-Coverage can also create more detailed reports in different formats, refer to this [article](https://www.codemag.com/article/1701081/Improve-Code-Quality-Using-Test-Coverage) to read more about them.
+Coverage can also create more detailed reports in different formats, refer to this [article](https://www.codemag.com/article/1701081/Improve-Code-Quality-Using-Test-Coverage) to read more about them.  
+
+Since your repository is public, you can also use fancy tools like [CodeCov](https://about.codecov.io) to generate reports and badges for your project.
