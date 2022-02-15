@@ -48,3 +48,8 @@ Once you have configured the project, you can run all the migrations that are re
 | DJANGO_SETTINGS_MODULE | config.settings.production           |
 | MAILGUN_API_KEY        | Get from MailGun                     |
 | MAILGUN_DOMAIN         | Get from MailGun                     |
+
+### Common bugs/Issues with Heroku
+
+- For some accounts, the redis plugin might require you to add a credit card/debit card on file, if this even happens to you and you don't have a credit card with you, switch to the `Redis Enterprise Cloud` plugin.
+- If Heroku does not allow 3 Dynos at the same time, then you can add the flag `-B` to the celery worker init command which will run the beat and the worker at the same time. For more info visit this [Stackoverflow answer](https://stackoverflow.com/questions/42566322/celery-worker-and-beat-load-in-one-command).
