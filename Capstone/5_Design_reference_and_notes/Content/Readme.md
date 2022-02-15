@@ -1,4 +1,4 @@
-Use the following Design Reference for your application: [Design Mockup]()
+Use the following Design Reference for your application: [Design Mockup](https://www.figma.com/file/kgOXmtptNxJUvkJ2qjeyzA/Django-201-Capstone?node-id=3%3A1146)
 
 ### Notes
 
@@ -14,4 +14,3 @@ Use the following Design Reference for your application: [Design Mockup]()
   - **Username**: secondarynurse  
     **Password**: secondarynurse  
     **UserType**: Secondary Nurse
-  
