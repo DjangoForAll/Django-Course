@@ -4,7 +4,7 @@
 content = "Hello World 1    "
 content = content.split()
 content.reverse()
-print( = "-".join(content))
+print("-".join(content))
 ```
 
 Opt :
